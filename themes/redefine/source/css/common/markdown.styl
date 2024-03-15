@@ -4,20 +4,20 @@
 
   blockquote
     p, ul, ol
-      padding 5px 5px 5px 10px
+      padding 20px 5px 20px 10px
 
     box-sizing border-box
     margin 20px 0
     color var(--default-text-color)
-    background var(--third-background-color)
+    background-color #E7F3FF
     padding 0 1rem 0 0.5rem
-    border-radius 0 $redefine-border-radius-medium $redefine-border-radius-medium 0
+    border-radius 12px 12px 12px 12px
     position relative
-    border-left 5px solid var(--default-text-color)
 
   p
     line-height $default-line-height
     color var(--default-text-color)
+    font-size 16px
     font-weight 400
     margin-bottom 1rem
     margin-top 0
@@ -25,12 +25,13 @@
   a
     position relative
     outline 0
-    text-decoration underline
     overflow-wrap break-word
+    font-size 18px
+    text-decoration underline
     cursor pointer
-    // border-bottom 1px solid var(--third-text-color)
+     border-bottom 1px solid var(--third-text-color)
     box-sizing border-box
-    padding-bottom 2px
+   
 
     .fas, .far, fab
       margin 0 2px 0 6px
@@ -39,7 +40,7 @@
       font-size 0.88rem
 
     &:hover
-      text-decoration underline
+       color #829BD6
 
       &::after
         background var(--primary-color)
@@ -112,7 +113,7 @@
     font-size 3.2rem
     font-weight 700
     border-bottom solid 2px var(--fourth-text-color)
-    margin-top $h1-heading-margin-top
+    margin-top 5rem
 
     +redefine-tablet()
       font-size 1.7rem
@@ -122,7 +123,7 @@
     font-weight 700
     padding 3px 0
     border-bottom solid 2px var(--fourth-text-color)
-    margin-top $h2-heading-margin-top
+    margin-top 4rem
 
     +redefine-tablet()
       font-size 1.6rem
@@ -130,7 +131,7 @@
   h3, .h3
     font-size 1.8rem
     font-weight 600
-    margin-top $h3-heading-margin-top
+    margin-top 2.8rem
 
     +redefine-tablet()
       font-size 1.5rem
@@ -138,7 +139,7 @@
   h4, .h4
     font-size 1.5rem
     font-weight 600
-    margin-top $h4-heading-margin-top
+    margin-top 2.5rem
 
     +redefine-tablet()
       font-size 1.4rem
@@ -146,7 +147,7 @@
   h5, .h5
     font-size 1.28rem
     font-weight 600
-    margin-top $h5-heading-margin-top
+    margin-top 2.2rem
 
     +redefine-tablet()
       font-size 1.18rem
@@ -155,7 +156,7 @@
     font-size 1.2rem
     font-weight 600
     line-height $default-line-height
-    margin-top $h6-heading-margin-top
+    margin-top 2rem
 
     +redefine-tablet()
       font-size 1.1rem
@@ -170,7 +171,7 @@
     transition-t('padding, margin', '0, 0', '0.2, 0.2', 'linear, linear')
 
     if (hexo-config('articles.style.image_alignment') == 'center')
-      margin 1rem auto 1rem
+      margin 1 auto 1rem
     else
       margin 1rem 0 1rem
 

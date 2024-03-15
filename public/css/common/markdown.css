@@ -6,20 +6,20 @@
   box-sizing: border-box;
   margin: 20px 0;
   color: var(--default-text-color);
-  background: var(--third-background-color);
+  background-color: #e7f3ff;
   padding: 0 1rem 0 0.5rem;
-  border-radius: 0 $redefine-border-radius-medium $redefine-border-radius-medium 0;
+  border-radius: 12px 12px 12px 12px;
   position: relative;
-  border-left: 5px solid var(--default-text-color);
 }
 .markdown-body blockquote p,
 .markdown-body blockquote ul,
 .markdown-body blockquote ol {
-  padding: 5px 5px 5px 10px;
+  padding: 20px 5px 20px 10px;
 }
 .markdown-body p {
   line-height: $default-line-height;
   color: var(--default-text-color);
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 1rem;
   margin-top: 0;
@@ -27,11 +27,13 @@
 .markdown-body a {
   position: relative;
   outline: 0;
-  text-decoration: underline;
   overflow-wrap: break-word;
-  cursor: pointer;
+  font-size: 18px;
+  text-decoration: underline;
   box-sizing: border-box;
-  padding-bottom: 2px;
+}
+.markdown-body a cursor pointer {
+  border-bottom: 1px solid var(--third-text-color);
 }
 .markdown-body a .fas,
 .markdown-body a .far,
@@ -42,9 +44,9 @@
   font-size: 0.88rem;
 }
 .markdown-body a:hover {
-  text-decoration: underline;
+  color: #829bd6;
 }
-.markdown-body a:hover::after {
+.markdown-body a::after {
   background: var(--primary-color);
   text-decoration: underline;
 }
@@ -120,7 +122,7 @@ redefine-tablet()
   font-size: 3.2rem;
   font-weight: 700;
   border-bottom: solid 2px var(--fourth-text-color);
-  margin-top: $h1-heading-margin-top;
+  margin-top: 5rem;
 redefine-tablet()
 }
 .markdown-body h2,
@@ -129,28 +131,28 @@ redefine-tablet()
   font-weight: 700;
   padding: 3px 0;
   border-bottom: solid 2px var(--fourth-text-color);
-  margin-top: $h2-heading-margin-top;
+  margin-top: 4rem;
 redefine-tablet()
 }
 .markdown-body h3,
 .markdown-body .h3 {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-top: $h3-heading-margin-top;
+  margin-top: 2.8rem;
 redefine-tablet()
 }
 .markdown-body h4,
 .markdown-body .h4 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-top: $h4-heading-margin-top;
+  margin-top: 2.5rem;
 redefine-tablet()
 }
 .markdown-body h5,
 .markdown-body .h5 {
   font-size: 1.28rem;
   font-weight: 600;
-  margin-top: $h5-heading-margin-top;
+  margin-top: 2.2rem;
 redefine-tablet()
 }
 .markdown-body h6,
@@ -158,7 +160,7 @@ redefine-tablet()
   font-size: 1.2rem;
   font-weight: 600;
   line-height: $default-line-height;
-  margin-top: $h6-heading-margin-top;
+  margin-top: 2rem;
 redefine-tablet()
 }
 .markdown-body img {
@@ -167,7 +169,7 @@ redefine-tablet()
   max-width: 100%;
   cursor: zoom-in;
   display: block;
-  margin: 1rem auto 1rem;
+  margin: 1 auto 1rem;
 }
 .markdown-body > table {
   border-spacing: 0;
