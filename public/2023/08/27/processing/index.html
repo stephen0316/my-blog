@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="一颗赛艇">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/08/27/processing/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="框架123456789101112131415161718&#x2F;&#x2F;声明变量int ...float ...&#x2F;&#x2F;初始化，执行一遍void setup()&#123;    初始化代码块&#125;&#x2F;&#x2F;重复执行void draw()&#123;    重复运行代码块&#125;&#x2F;&#x2F;写函数returntype functionname (parameters)&#123;     &#x2F;&#x2F; code&#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="processing学习笔记（一）">
+<meta property="og:url" content="http://example.com/2023/08/27/processing/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="框架123456789101112131415161718&#x2F;&#x2F;声明变量int ...float ...&#x2F;&#x2F;初始化，执行一遍void setup()&#123;    初始化代码块&#125;&#x2F;&#x2F;重复执行void draw()&#123;    重复运行代码块&#125;&#x2F;&#x2F;写函数returntype functionname (parameters)&#123;     &#x2F;&#x2F; code&#125;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/00.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/w.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/e.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/r.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/q.png">
+<meta property="article:published_time" content="2023-08-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-22T03:05:34.539Z">
+<meta property="article:author" content="antidote">
+<meta property="article:tag" content="processing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/00.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG">
+    <!--- Page Info-->
+    
+    <title>
+        
+            processing学习笔记（一） -
+        
+        Antidote
+    </title>
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Chillax/chillax.css">
+
+    
+        <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/anime.min.js"></script>
+    <h1 class="ml13">
+        Antidote
+    </h1>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100,0],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+            targets: '.ml13 .letter',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
+        });
+
+        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
+        hidePreloaderAfterTimeout(5000);
+
+        function hidePreloaderAfterTimeout(delay) {
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 200);
+            }, delay);
+        }
+    </script>
+</div>
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/fonts.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Satoshi/satoshi.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"12px","image_alignment":"center","image_caption":false,"link_icon":false,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["UE designer"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":false},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_0637.PNG","dark":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/4.webp"},"title":"Hiding In The Darkness","subtitle":{"text":["欲买桂花同载酒，终不似，少年游"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"【钢琴】渔光曲","artist":"昼夜","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2%20-%20001%20-%20%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/yuguangqu.jpg"},{"name":"梁祝","artist":"吕思清","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E6%A2%81%E7%A5%9D.MP3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.10.11.png"},{"name":"Merry Christmas Mr. Lawrence","artist":"坂本龍一","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawrence%E3%80%8B%E5%9C%A3%E8%AF%9E%E5%BF%AB%E4%B9%90%EF%BC%8C%E5%8A%B3%E4%BC%A6%E6%96%AF%E5%85%88%E7%94%9F-%E3%80%8A1996%E3%80%8B%E3%80%90Hi-Res%E3%80%91%20-%20001%20-%20%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawr%E2%80%A6.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"相册":{"path":"/masonry","icon":"fa-regular fa-camera"},"只言片语":{"path":"/essays","icon":"fa-light fa-thought-bubble"},"About":{"path":"/about","icon":"fa-regular fa-address-card"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"敲敲小黑板，今日店休","links":{"归档":{"path":"/archives","icon":"fa-regular fa-archive"},"相册":{"icon":"fa-regular fa-camera","path":"/masonry"},"只言片语":{"icon":"fa-light fa-thought-bubble","path":"/essays"},"书单":{"icon":"fa-light fa-books","path":"/books"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Antidote
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/masonry"
+                                        >
+                                    <i class="fa-regular fa-camera fa-fw"></i>
+                                    相册
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/essays"
+                                        >
+                                    <i class="fa-light fa-thought-bubble fa-fw"></i>
+                                    只言片语
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-address-card fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/masonry"
+                        >
+                            <span>
+                                相册
+                            </span>
+                            
+                                <i class="fa-regular fa-camera fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/essays"
+                        >
+                            <span>
+                                只言片语
+                            </span>
+                            
+                                <i class="fa-light fa-thought-bubble fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-address-card fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-4xl font-bold px-2 sm:px-6 md:px-8 py-3">processing学习笔记（一）</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">一颗赛艇</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-08-27</span>
+        <span class="mobile">2023-08-27</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/processing/">processing</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.4k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明变量</span></span><br><span class="line"><span class="type">int</span> ...</span><br><span class="line"><span class="type">float</span> ...</span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化，执行一遍</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">setup</span><span class="params">()</span>&#123;</span><br><span class="line">    初始化代码块</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//重复执行</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">draw</span><span class="params">()</span>&#123;</span><br><span class="line">    重复运行代码块</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//写函数</span></span><br><span class="line">returntype <span class="title function_">functionname</span> <span class="params">(parameters)</span>&#123; </span><br><span class="line">    <span class="comment">// code</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></div>
+<p>代码从上往下运行，后画的图形在最上层，注意顺序</p>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>&amp;&amp;（逻辑与）：同时满足<br>||（逻辑或）：满意任一条件<br>！（逻辑非）：否定</p>
+<h3 id="background"><a href="#background" class="headerlink" title="background"></a>background</h3><p>background（0）：0-255，代表灰度<br>background（0,0）：0-255，代表灰度和透明度<br>background（0,0,0）：0-255，代表RGB<br>background（0,0,0,0）：0-255，代表RGB，透明度</p>
+<h3 id="基础图形"><a href="#基础图形" class="headerlink" title="基础图形"></a>基础图形</h3><p>line(x1,y1,x2,y2)：线段的两个端点坐标<br>rect(x,y,width,height)：定位点在左上角<br>ellipse(x,y,width,height)：1.X轴方向的位置；2.Y轴方向的位置；3.长轴；4.短轴；定位点在圆心<br>arc(x,y,width,height,start,stop)：角度的两种表示方式：1）PI 、2）radians（X）；PI&#x2F;2&#x3D;radians(90)<br>triangle(x1,y1,x2,y2,x3,y3)<br>quad(x1,y1,x2,y2,x3,y3,x4,y4)<br>bezier(x1, y1, cx1, cy1, cx2, cy2, x2, y2)</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/00.png"
+                      alt="00" width="400"
+                >
+
+<p>调整图形的原点：–Mode，例：rectMode（CENTER）<br>参数类型：CORNER、CORNERS、CENTER和RADIUS</p>
+<div align="center"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image.png"
+                      alt="image" width="600"
+                ></div>
+
+<h3 id="基础语句"><a href="#基础语句" class="headerlink" title="基础语句"></a>基础语句</h3><h4 id="fill"><a href="#fill" class="headerlink" title="fill"></a>fill</h4><p>同background，会影响至下一个fill前的所有的图像<br>noFill() 不填充</p>
+<h4 id="stroke"><a href="#stroke" class="headerlink" title="stroke"></a>stroke</h4><p>stroke(0,0,0) 控制描边颜色<br>noStroke() 取消描边<br>strokeWeight(X) 描边，X为描边大小<br>strokeCap(mode) 线条端点形式，mode：SQUARE（方形端点）、PROJECT（方形延伸端点）、ROUND（圆形端点）</p>
+<h4 id="random"><a href="#random" class="headerlink" title="random"></a>random</h4><p>random(x,y)，y&gt;x，否则无效</p>
+<h4 id="constrain"><a href="#constrain" class="headerlink" title="constrain"></a>constrain</h4><p>constrain(x,y,z)<br>x：需要限制的参数<br>y：最小值<br>z：最大值<br>eg：constrain(r,0,255) ：Red色值范围（0,255）</p>
+<h4 id="noise"><a href="#noise" class="headerlink" title="noise"></a>noise</h4><p>noise(x)：线性<br>noise(x,y)：平面<br>noise(x,y,z)：立体</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/w.png"
+                      alt="w" width="400"
+                >
+
+<h4 id="translate"><a href="#translate" class="headerlink" title="translate"></a>translate</h4><p>translate（x,y）改变坐标系原点的位置</p>
+<h4 id="frameRate"><a href="#frameRate" class="headerlink" title="frameRate"></a>frameRate</h4><p>运行draw()时的速度，例：frameRate(30)意味着每秒30帧</p>
+<h4 id="map映射函数"><a href="#map映射函数" class="headerlink" title="map映射函数"></a>map映射函数</h4><p>y&#x3D;map(x,a,b,A,B)：把x在(a,b)区间内的值，映射到(A,B)区间<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/e.png"
+                      alt="e" width="500"
+                ></p>
+<h4 id="abs"><a href="#abs" class="headerlink" title="abs"></a>abs</h4><p>abs()求绝对值，abs(x)&gt;&#x3D;0</p>
+<h4 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h4><p>x&#x3D;圆心.x + r * cos(t)<br>y&#x3D;圆心.y + r * sin(t)<br>t为弧度，radians（t）可以将角度转化为弧度</p>
+<h4 id="鼠标交互"><a href="#鼠标交互" class="headerlink" title="鼠标交互"></a>鼠标交互</h4><p>mouseX，mouseY<br>eg：ellipse(mouseX,mouseY,100,100)<br>pmouseX，pmouseY：前一个鼠标坐标<br>mousePressed() </p>
+<h4 id="键盘交互"><a href="#键盘交互" class="headerlink" title="键盘交互"></a>键盘交互</h4><p>keyPressed()</p>
+<h3 id="内置变量"><a href="#内置变量" class="headerlink" title="内置变量"></a>内置变量</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/r.png"
+                      width="600"
+                ><br></p>
+<h3 id="媒体"><a href="#媒体" class="headerlink" title="媒体"></a>媒体</h3><p>1、在根目录新建文件夹“data”，拖入图片</p>
+<p>2、引用图片：</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">PImage pic;<span class="comment">//声明变量，变量名只能以_或字母开头</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">setup</span><span class="params">()</span>&#123;</span><br><span class="line">    size(<span class="number">500</span>,<span class="number">500</span>);</span><br><span class="line">    pic=loadIamge(<span class="string">&quot;picname.jpg&quot;</span>);<span class="comment">//引用图片</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">draw</span><span class="params">()</span>&#123;</span><br><span class="line">    background(pic)<span class="comment">//将图片作为窗口背景</span></span><br><span class="line">    image(pic,<span class="number">0</span>,<span class="number">0</span>,<span class="number">150</span>,<span class="number">150</span>);<span class="comment">//(变量名,x,y,width,heigth)</span></span><br><span class="line">    pic.resize(<span class="number">300</span>,<span class="number">300</span>);<span class="comment">//改变图片尺寸</span></span><br><span class="line"></span><br><span class="line">    tint(明度);</span><br><span class="line">    tint(明度,透明度);</span><br><span class="line">    tint(R,G,B);</span><br><span class="line">    tint(R,G,B,透明度);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h3 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h3><h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><p>while（布尔表达式）{ 操作指令 }<br>考虑：1、循环的初始条件；2、循环的终止条件；3、循环的操作指令</p>
+<h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><p>for（初始值；布尔表达式）{ 操作指令 }</p>
+<h3 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h3><p>PVector(x,y,z)<br>L.x可以获取向量的x值，y，z同理</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PVector L; <span class="comment">//声明一个向量</span></span><br><span class="line">...</span><br><span class="line">L=new PVector(<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>); <span class="comment">//初始化</span></span><br></pre></td></tr></table></figure></div>
+<p>add（）、sub（）、mult（）、div（） 向量的加减乘除<br>mag（）计算向量的长度<br>normalize（）单位化向量</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><blockquote>
+<p>数组是指具有相同数据类型的数据元素组成的集合。数组同样有数据类型，而且一个数组内只能同时存在一种数据类型</p>
+</blockquote>
+<p>特点：数据按顺序成组，每个数据项都有下标，数据项位置可交换</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int shuzu[];</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int shuzu[]=new int [100];</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> shuzu[]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure></div>
+<p>遍历数组，获取数组大小：<strong>数组名.length</strong><br><br><strong>二维数组</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int shuzu[][]=new int[2][4] //2行4列</span><br></pre></td></tr></table></figure></div>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>自定义函数：返回值类型、函数名、参数										</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">returntype <span class="title function_">functionname</span> <span class="params">(parameters)</span>&#123; </span><br><span class="line">    <span class="comment">// code</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></div>
+<p>参数：实参、形参<br>实参：传递给函数的数值<br>形参：函数定义中的括号内部的变量声明</p>
+<h3 id="对象和类"><a href="#对象和类" class="headerlink" title="对象和类"></a>对象和类</h3><p>对象：具有数据、功能，能完成某个任务，是一个实体<br>类：具有共同特征的对象的集合<br>类的组成：名称、数据、构造函数、方法（函数）</p>
+<ul>
+<li>名称：自定义，首字母大写</li>
+<li>数据：一系列变量</li>
+<li>构造函数：构造函数是一种特殊的函数，位于类的内部，用于创建对象本身的实例，对变量进行赋值。当有一个新的对象从类中创造出来的时候，它具有和类相同的名字，用new运算符进行调用: Car myCar &#x3D; new Car() </li>
+<li>函数：通过对函数功能的设置，为对象增加自定义函数</li>
+</ul>
+<h4 id="定义类：class"><a href="#定义类：class" class="headerlink" title="定义类：class"></a>定义类：class</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/q.png"
+                      alt="q" width="400"
+                ><br></p>
+<h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><ol>
+<li>声明一个对象<br>类的声明与变量类似，不同的地方是这里的变量类型是类的名称，后面的变量名是我们自定，另外对象不是初始值，而是一种复杂的数据类型</li>
+<li>初始化<br>声明完变量后会给其赋值，比如: x &#x3D; 1;<br>初始化对象相对复杂一些，和赋值不同，需要通过 new 运算符构建这个对象，eg：lion&#x3D;new Animal()</li>
+<li>调用对象的方法<br>当声明并初始化一个对象变量之后，就可以使用这个对象了。使用对象需要调用内置于对象之中的函数：</li>
+</ol>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">variableName.objectMethod(method arguments); </span><br><span class="line"><span class="comment">// eg：lion.display();</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Animal monkey; <span class="comment">//声明对象</span></span><br><span class="line">Animal lion;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">setup</span><span class="params">()</span>&#123;</span><br><span class="line">  monkey=new Animal(<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>);<span class="comment">//初始化</span></span><br><span class="line">  lion=new Animal(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">draw</span><span class="params">()</span>&#123;</span><br><span class="line">  monkey.函数名();<span class="comment">//调用对象的方法</span></span><br><span class="line">  lion.函数名();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span>&#123;</span></span><br><span class="line"> <span class="type">int</span> x,y,z;<span class="comment">//声明变量</span></span><br><span class="line"> </span><br><span class="line"> Animal()&#123; <span class="comment">// 变量赋值</span></span><br><span class="line">  x=</span><br><span class="line">  y=</span><br><span class="line">  z=</span><br><span class="line"> &#125;</span><br><span class="line">    </span><br><span class="line"> <span class="type">void</span> 函数名()&#123;</span><br><span class="line">  ...</span><br><span class="line"> &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/processing/">#processing</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/07/12/常看常新的技术常识/" title="常看常新的技术常识" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="常看常新的技术常识" class="!max-w-none">
+  <span class="title">常看常新的技术常识</span>
+</a><a class="recommended-article-item" href="/2023/03/01/Blog的搭建与写作/" title="个人博客的搭建及写作" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="个人博客的搭建及写作" class="!max-w-none">
+  <span class="title">个人博客的搭建及写作</span>
+</a><a class="recommended-article-item" href="/2023/04/01/云南/" title="大理，大理！" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="大理，大理！" class="!max-w-none">
+  <span class="title">大理，大理！</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/07/12/常看常新的技术常识/" title="常看常新的技术常识" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="常看常新的技术常识" class="!max-w-none">
+  <span class="title">常看常新的技术常识</span>
+</a><a class="recommended-article-item" href="/2023/03/01/Blog的搭建与写作/" title="个人博客的搭建及写作" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="个人博客的搭建及写作" class="!max-w-none">
+  <span class="title">个人博客的搭建及写作</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/09/21/New%20Bing%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%EF%BC%8C%E8%B6%8A%E6%9D%A5%E8%B6%8A%E7%89%9B%E7%9A%84AI/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">GPT4.0使用体验：越来越牛的AI</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/07/12/%E5%B8%B8%E7%9C%8B%E5%B8%B8%E6%96%B0%E7%9A%84%E6%8A%80%E6%9C%AF%E5%B8%B8%E8%AF%86/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">常看常新的技术常识</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">processing学习笔记（一）</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6"><span class="nav-text">框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-text">操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#background"><span class="nav-text">background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%BD%A2"><span class="nav-text">基础图形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5"><span class="nav-text">基础语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F"><span class="nav-text">内置变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AA%92%E4%BD%93"><span class="nav-text">媒体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%A4%8D"><span class="nav-text">重复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F"><span class="nav-text">向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB"><span class="nav-text">对象和类</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+    </ul>
+
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+       
+
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Swup.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/imageViewer.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/utils.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/main.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/categoryList.js"></script>
+
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/runtime.js"></script>
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/typed.js"></script>
+
+
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/masonry.js"></script>
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/tocToggle.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/toc.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/APlayer.min.js"></script>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>

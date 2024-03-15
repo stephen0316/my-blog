@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="一颗赛艇">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/09/21/new bing使用体验，越来越牛的ai/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="今年ChatGPT、Midjourney等工具的发展掀起了一股AI热潮。在我试用了一段时间后明显能够感受到GPT-3.5在自然语言、信息检索、辅助创作等方面确实大幅领先了传统ai工具。但它并不完美，一方面，它有时会给出看似合理但实际错误的答案，并且没有数据来源去验证回答的真实性；另一方面，在内容创作上GPT-3.5仍显现出较低的水平，这也许就是人类最难被ai取代的地方。 3.5差强人意，4.0是否">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GPT4.0使用体验：越来越牛的AI">
+<meta property="og:url" content="http://example.com/2023/09/21/New%20Bing%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%EF%BC%8C%E8%B6%8A%E6%9D%A5%E8%B6%8A%E7%89%9B%E7%9A%84AI/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="今年ChatGPT、Midjourney等工具的发展掀起了一股AI热潮。在我试用了一段时间后明显能够感受到GPT-3.5在自然语言、信息检索、辅助创作等方面确实大幅领先了传统ai工具。但它并不完美，一方面，它有时会给出看似合理但实际错误的答案，并且没有数据来源去验证回答的真实性；另一方面，在内容创作上GPT-3.5仍显现出较低的水平，这也许就是人类最难被ai取代的地方。 3.5差强人意，4.0是否">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230912161845545.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918172218730.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230921110622423.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918185900061.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918190632661.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918174751400.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918182302328.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918182809566.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230919155224950.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230919155912634.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230912172559506.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230912180232924.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230919155525135.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230919161636523.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230921110231490.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-09-21_11.10.30.gif">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/output.gif">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-09-21_11.41.03.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-09-21_14.16.01.png">
+<meta property="article:published_time" content="2023-09-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-22T03:12:16.729Z">
+<meta property="article:author" content="antidote">
+<meta property="article:tag" content="ChatGPT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230912161845545.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG">
+    <!--- Page Info-->
+    
+    <title>
+        
+            GPT4.0使用体验：越来越牛的AI -
+        
+        Antidote
+    </title>
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Chillax/chillax.css">
+
+    
+        <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/anime.min.js"></script>
+    <h1 class="ml13">
+        Antidote
+    </h1>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100,0],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+            targets: '.ml13 .letter',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
+        });
+
+        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
+        hidePreloaderAfterTimeout(5000);
+
+        function hidePreloaderAfterTimeout(delay) {
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 200);
+            }, delay);
+        }
+    </script>
+</div>
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/fonts.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Satoshi/satoshi.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"12px","image_alignment":"center","image_caption":false,"link_icon":false,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["UE designer"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":false},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_0637.PNG","dark":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/4.webp"},"title":"Hiding In The Darkness","subtitle":{"text":["欲买桂花同载酒，终不似，少年游"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"【钢琴】渔光曲","artist":"昼夜","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2%20-%20001%20-%20%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/yuguangqu.jpg"},{"name":"梁祝","artist":"吕思清","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E6%A2%81%E7%A5%9D.MP3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.10.11.png"},{"name":"Merry Christmas Mr. Lawrence","artist":"坂本龍一","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawrence%E3%80%8B%E5%9C%A3%E8%AF%9E%E5%BF%AB%E4%B9%90%EF%BC%8C%E5%8A%B3%E4%BC%A6%E6%96%AF%E5%85%88%E7%94%9F-%E3%80%8A1996%E3%80%8B%E3%80%90Hi-Res%E3%80%91%20-%20001%20-%20%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawr%E2%80%A6.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"相册":{"path":"/masonry","icon":"fa-regular fa-camera"},"只言片语":{"path":"/essays","icon":"fa-light fa-thought-bubble"},"About":{"path":"/about","icon":"fa-regular fa-address-card"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"敲敲小黑板，今日店休","links":{"归档":{"path":"/archives","icon":"fa-regular fa-archive"},"相册":{"icon":"fa-regular fa-camera","path":"/masonry"},"只言片语":{"icon":"fa-light fa-thought-bubble","path":"/essays"},"书单":{"icon":"fa-light fa-books","path":"/books"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Antidote
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/masonry"
+                                        >
+                                    <i class="fa-regular fa-camera fa-fw"></i>
+                                    相册
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/essays"
+                                        >
+                                    <i class="fa-light fa-thought-bubble fa-fw"></i>
+                                    只言片语
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-address-card fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/masonry"
+                        >
+                            <span>
+                                相册
+                            </span>
+                            
+                                <i class="fa-regular fa-camera fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/essays"
+                        >
+                            <span>
+                                只言片语
+                            </span>
+                            
+                                <i class="fa-light fa-thought-bubble fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-address-card fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-4xl font-bold px-2 sm:px-6 md:px-8 py-3">GPT4.0使用体验：越来越牛的AI</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/logo.JPG">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">一颗赛艇</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-09-21</span>
+        <span class="mobile">2023-09-21</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%80%9D%E8%80%83/">思考</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/ChatGPT/">ChatGPT</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.5k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>今年ChatGPT、Midjourney等工具的发展掀起了一股AI热潮。在我试用了一段时间后明显能够感受到GPT-3.5在自然语言、信息检索、辅助创作等方面确实大幅领先了传统ai工具。但它并不完美，一方面，它有时会给出看似合理但实际错误的答案，并且没有数据来源去验证回答的真实性；另一方面，在内容创作上GPT-3.5仍显现出较低的水平，这也许就是人类最难被ai取代的地方。</p>
+<p>3.5差强人意，4.0是否会有更好的表现？出于好奇我又试用了下GPT-4。前沿科技体验起来有些许昂贵，白嫖党选择试玩搭载GPT-4内核的New Bing。</p>
+<p>首先弄清楚GPT-4相比于GPT-3.5主要进步在哪些方面：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230912161845545.png"
+                      alt="image-20230912161845545"
+                ></p>
+<p>可以看到GPT-3.5明显给出了错误的信息，GPT-4.0早在今年3月便已发布，3.5却回答尚未发布，而4.0给出了我们想要的答案，简单总结一下4.0的进步之处：</p>
+<ul>
+<li>多模态模型，能更好地理解图像、音频等非文本信息</li>
+<li>能处理更复杂的任务</li>
+<li>更好的性能，更强大的创造力</li>
+<li>更可靠</li>
+</ul>
+<p>下面我们分别测试一下这几个方面。</p>
+<h3 id="图像处理"><a href="#图像处理" class="headerlink" title="图像处理"></a>图像处理</h3><p>开胃小菜，<strong>图生文</strong>：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918172218730.png"
+                      alt="image-20230918172218730"
+                ></p>
+<p>（。。。。。。。。。。。。文言文这一段太过抽象）</p>
+<p>通过图片信息编写一段故事脚本：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230921110622423.png"
+                      alt="image-20230921110622423"
+                ></p>
+<p>（迪士尼编剧：？）接着看下<strong>图像推理</strong>方面，AI能否通过图片推理出一些简单信息：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918185900061.png"
+                      alt="image-20230918185900061"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918190632661.png"
+                      alt="image-20230918190632661"
+                ></p>
+<h3 id="复杂任务处理"><a href="#复杂任务处理" class="headerlink" title="复杂任务处理"></a>复杂任务处理</h3><p>找了几个难度不等的逻辑推理问题来试试4.0的含金量：</p>
+<p>Q1：一楼到十楼的每层电梯门口都放着一颗钻石，钻石大小不一。你乘坐电梯从一楼到十楼，每层楼电梯门都会打开一次，只能拿一次钻石，问怎样才能拿到最大的一颗？</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918174751400.png"
+                      alt="image-20230918174751400"
+                ></p>
+<p>Q2：1元钱一瓶汽水，喝完后两个空瓶换一瓶汽水，问：你有20元钱，最多可以喝到几瓶汽水？</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918182302328.png"
+                      alt="image-20230918182302328"
+                ></p>
+<p>Q3：There are 9 birds in the tree,the hunter shoots one,how many birds are left in the tree?</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230918182809566.png"
+                      alt="image-20230918182809566"
+                ></p>
+<p>此外我还发现bing chat已经能够解析网页和文档内容并总结出要点。具体做法：1、用edge打开pdf；2、点开bing chat的窗口；3、输入指令即可。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230919155224950.png"
+                      alt="image-20230919155224950"
+                ></p>
+<p>让人口水直流的功能🤩甚至能让他写一段读后感，体验一把中学语文老师…</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230919155912634.png"
+                      alt="image-20230919155912634"
+                ></p>
+<h3 id="创造力"><a href="#创造力" class="headerlink" title="创造力"></a>创造力</h3><h4 id="图像创作"><a href="#图像创作" class="headerlink" title="图像创作"></a>图像创作</h4><p>Q1：请帮我画一张猫的画，关键词：美漫风、凶猛、帅气、戴着骑士帽</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230912172559506.png"
+                      alt="image-20230912172559506"
+                ></p>
+<p>视觉表现力还不错，有midjourney的味道了。特别要提的一点是，Bing Chat可以根据原始问题提供一系列衍生问题，顺着这些问题我们可以不断完善图画：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230912180232924.png"
+                      alt="image-20230912180232924"
+                ></p>
+<h4 id="文案写作"><a href="#文案写作" class="headerlink" title="文案写作"></a>文案写作</h4><p>Q1：我面前有一杯白开水，请帮我写一段富有创意的广告宣传语，突出他的特质，激发人们的购买欲</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230919155525135.png"
+                      alt="image-20230919155525135"
+                ></p>
+<p>再来一个复杂一点的，能看出有明显差距：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230919161636523.png"
+                      alt="image-20230919161636523"
+                ></p>
+<h4 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h4><p>正好最近在学processing，看看ai能否写出有趣的代码</p>
+<p>Q1：请帮我写一段processing的代码，我希望画面具有视觉冲击力，生动有趣</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20230921110231490.png"
+                      alt="image-20230921110231490"
+                ></p>
+<p>仅从视觉上来看，3.5似乎有更好的表现，但4.0的图案是通过鼠标运动来绘制的，多一个交互性。再看下面一个例子（左：GPT-3.5，右：GPT-4.0）</p>
+<div> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-09-21_11.10.30.gif"
+                      width="560px"
+                >   <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/output.gif"
+                      width="425" 
+                ></div>
+
+<p>除了能写代码，ai还能根据代码进行反向推导，并为代码添加注释、debug。如图所示，即使我故意录入了一段重复错误的代码，ai也能输出正确结果，甚至还分析了代码潜在的问题。Bing更进一步地给出了潜在问题的修改建议和代码，这一点体验真的太好了。</p>
+<p>GPT-3.5:</p>
+<div align="center"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-09-21_11.41.03.png"
+                      alt="iShot_2023-09-21_11.41.03" width="640"
+                ></div>
+
+<p>GPT-4.0:</p>
+<div align="center"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-09-21_14.16.01.png"
+                      alt="iShot_2023-09-21_14.16.01" width="600"
+                ></div>
+
+<p>在带有玩票性质地，粗略地体验了下GPT-3.5、GPT-4.0后，我发现自己已经对它形成了路径依赖。当我想要快速了解一个新的行业时，以前需要花费大量时间去不同平台搜寻信息，还要甄别信息的时效性。现在有了GPT，它能帮我快速从网络世界中找到最新的有效信息，极大程度上降低了我的时间成本。</p>
+<p>在享用ai带来的便利的同时，网上也会有很多声音担心人类迟早会被ai取代。个人认为在可预见的未来内，这种事只会发生在个别行业群体，并不具备普世性。举个例子，大型农业机械本身是非常落后的技术，如果在中国按照黑龙江的标准推广大型农业机械，全中国的耕地只要几百万职业农民就能种完，多出来的上亿人怎么办？这才只是黑龙江的标准，要是按照美国标准去推广，连这几百万里的90%都得失业。现在这上亿人并没有失去营生上街打砸，而是仍然在村里岁月静好，显然这里面有技术之外的看不见的手在发挥着作用。</p>
+<p>不仅仅在中国，全世界哪怕是英美这样的发达国家，仍然有极大比例的人每天在使用中世纪的生产方式进行办公，即使一个脑子机灵点的应届大学生都完全有能力去优化这些工作的流程，从而裁掉这当中的绝大部分百万漕工。为什么没有呢？显然这里面有技术之外的看不见的手在发挥着作用。</p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/ChatGPT/">#ChatGPT</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/07/12/常看常新的技术常识/" title="常看常新的技术常识" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="常看常新的技术常识" class="!max-w-none">
+  <span class="title">常看常新的技术常识</span>
+</a><a class="recommended-article-item" href="/2023/03/10/B端表格设计指南/" title="B端表格设计指南" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="B端表格设计指南" class="!max-w-none">
+  <span class="title">B端表格设计指南</span>
+</a><a class="recommended-article-item" href="/2023/03/01/Blog的搭建与写作/" title="个人博客的搭建及写作" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="个人博客的搭建及写作" class="!max-w-none">
+  <span class="title">个人博客的搭建及写作</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/07/12/常看常新的技术常识/" title="常看常新的技术常识" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="常看常新的技术常识" class="!max-w-none">
+  <span class="title">常看常新的技术常识</span>
+</a><a class="recommended-article-item" href="/2023/03/10/B端表格设计指南/" title="B端表格设计指南" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="B端表格设计指南" class="!max-w-none">
+  <span class="title">B端表格设计指南</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/10/13/2023-10-13/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">近期读物｜芯片、AIGC及其他</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/08/27/processing/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">processing学习笔记（一）</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">GPT4.0使用体验：越来越牛的AI</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86"><span class="nav-text">图像处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E4%BB%BB%E5%8A%A1%E5%A4%84%E7%90%86"><span class="nav-text">复杂任务处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E9%80%A0%E5%8A%9B"><span class="nav-text">创造力</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+    </ul>
+
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+       
+
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Swup.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/imageViewer.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/utils.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/main.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/categoryList.js"></script>
+
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/runtime.js"></script>
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/typed.js"></script>
+
+
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/masonry.js"></script>
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/tocToggle.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/toc.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/APlayer.min.js"></script>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>
