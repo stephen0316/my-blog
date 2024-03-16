@@ -768,7 +768,7 @@ body {
   background: var(--background-color);
   font-family: Satoshi-Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
   font-weight: 450;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
 }
 html::-webkit-scrollbar,
@@ -907,7 +907,7 @@ button {
 }
 .markdown-body {
   font-family: 'Satoshi-Variable', sans-serif, 'Noto Sans SC', sans-serif, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 }
 .markdown-body blockquote {
   box-sizing: border-box;
@@ -926,7 +926,7 @@ button {
 .markdown-body p {
   line-height: 1.5;
   color: var(--default-text-color);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   margin-bottom: 1rem;
   margin-top: 0;
