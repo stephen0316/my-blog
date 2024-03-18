@@ -907,7 +907,7 @@ button {
 }
 .markdown-body {
   font-family: 'Satoshi-Variable', sans-serif, 'Noto Sans SC', sans-serif, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 .markdown-body blockquote {
   box-sizing: border-box;
@@ -923,6 +923,7 @@ button {
 .markdown-body blockquote ol {
   padding: 20px 5px 20px 10px;
 }
+
 .markdown-body p {
   line-height: 1.5;
   color: var(--default-text-color);
