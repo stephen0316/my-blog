@@ -768,7 +768,7 @@ body {
   background: var(--background-color);
   font-family: Satoshi-Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
   font-weight: 450;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
 }
 html::-webkit-scrollbar,
