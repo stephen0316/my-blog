@@ -80,7 +80,7 @@ home_banner:
     light: "#fff" # light mode
     dark: "#d1d1b6" # dark mode
   text_style: 
-    title_size: 2.8rem
+    title_size: 2.8 rem
     subtitle_size: 1.5rem
     line_height: 1.2
   custom_font: 

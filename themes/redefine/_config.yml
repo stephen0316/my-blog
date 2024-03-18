@@ -65,7 +65,7 @@ home_banner:
   
   title: Hiding In The Darkness
   subtitle:
-    text: ["欲买桂花同载酒，终不似，少年游"] 
+    text: ["但少闲人如吾两人者耳"] 
     hitokoto:  # 一言配置
       enable: false 
       api: https://v1.hitokoto.cn # API URL, can add types, see https://developer.hitokoto.cn/sentence/#%E5%8F%A5%E5%AD%90%E7%B1%BB%E5%9E%8B-%E5%8F%82%E6%95%B0
@@ -80,7 +80,7 @@ home_banner:
     light: "#fff" # light mode
     dark: "#d1d1b6" # dark mode
   text_style: 
-    title_size: 2.8rem
+    title_size: 2.8 rem
     subtitle_size: 1.5rem
     line_height: 1.2
   custom_font: 
