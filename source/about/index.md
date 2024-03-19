@@ -28,21 +28,9 @@ sidebar: custom
 ### 💆🏻‍♂️ 乐活
 小时候学过珠算、书法、绘画，很多兴趣都已经放下了，唯有阅读爱好📖一直保持着。高中时期很喜欢王小波、沈从文、余秋雨等名家，但随着时间的增长，阅读偏好似乎已经逐渐从作者转向为内容本身，常常书读完了却没记住作者是谁😥<br/>🍽️恩格尔系数长期偏高，不仅爱吃，也享受做饭的乐趣，对我而言做饭就像画画，是一个创造性的过程  <br/>🎬阅片500+，最喜欢的导演是诺兰和是枝裕和 <br/>🎧老歌爱好者，喜欢陈绮贞、孙燕姿、陶喆...相比于录音室作品，更喜欢live版本，常常在b站翻一些现场来听。今年以来喜欢上了播客，常听的频道：忽左忽右、乱翻书、商业就是这样...<br>养了两只猫，一只叫墨墨，一只叫饼干，我太爱我的猫咪们啦！
 
-<div style="overflow:auto">
-  <div style="width:538px;float:left">
-    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_2034.jpeg" style="margin-bottom:2px">
-    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_9347.jpeg" />
-  </div>
-  <div style="width:467px;float:right">
-    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_2582.jpeg"/></div></div>
+![image-20240319103310537](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20240319103310537.png)
 
-
-
-<div style="overflow:auto">
-  <div style="width:627px;float:left"><img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/ce9172ab0e7567c75710fa9221a7dfb9.jpg"></div>
-  <div style="width:378px;float:right"> <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/52ae7adc3fd154a433568968c6e2d968.jpg" style="margin-bottom:2px"><img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/250648ed37b4a7aa244bca90d404e959.jpg" alt="250648ed37b4a7aa244bca90d404e959" /></div>
-</div>
-
+![image-20240319103205180](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image-20240319103205180.png)
 
 
 ### ✍🏻 我说
