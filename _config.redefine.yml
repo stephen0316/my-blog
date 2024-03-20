@@ -1,6 +1,6 @@
 info:
-  title: Antidote
-  author: 一颗赛艇
+  title: Ksana
+  author: Ksana
   url: 
 
 defaults:
@@ -15,12 +15,12 @@ colors:
 global:
   fonts:
     chinese: 
-      enable: false # Whether to enable custom chinese fonts
+      enable: true # Whether to enable custom chinese fonts
       family: 
       url:  # Font URL to CSS file
   
     english: 
-      enable: false # Whether to enable custom english fonts
+      enable: true # Whether to enable custom english fonts
       family: 
       url:  # Font URL to CSS file
   
@@ -112,6 +112,13 @@ navbar:
     Home: 
       path: / 
       icon: fa-regular fa-house 
+
+    看什么:
+      icon: fa-regular fa-eyes
+      submenus:
+        书单: /books
+        观影: /movies
+
     Archives: 
       path: /archives 
       icon: fa-regular fa-archive
@@ -146,7 +153,7 @@ home:
     enable: true # Whether to enable sidebar
     position: left # Sidebar position. left, right
     first_item: info # menu, info
-    announcement: 敲敲小黑板，今日店休
+    announcement: 今日店休
     links:
       相册:
         icon: fa-regular fa-camera
