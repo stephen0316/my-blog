@@ -19,7 +19,7 @@
 .markdown-body p {
   line-height: $default-line-height;
   color: var(--default-text-color);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 1rem;
   margin-top: 0;
