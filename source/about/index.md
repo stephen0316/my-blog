@@ -2,8 +2,9 @@
 title: 自言自语
 description: 保持好奇👀
 layout: about
-comments: false
+comments: true
 sidebar: custom
+
 ---
 
 ```bash
