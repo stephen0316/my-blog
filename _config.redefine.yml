@@ -232,7 +232,7 @@ comment:
   config:
     # Waline comment system. See https://waline.js.org/
     waline:
-      serverUrl: https://blogcommentsystem-stephen0316s-projects.vercel.app/
+      serverUrl: https://www.woooooo.cn/
       lang: zh-CN 
       emoji: [] # Waline emojis, see https://waline.js.org/guide/features/emoji.html
       recaptchaV3Key: wasd # Google reCAPTCHA v3 key. See https://waline.js.org/reference/client/props.html#recaptchav3key
