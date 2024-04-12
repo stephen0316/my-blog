@@ -228,7 +228,7 @@ articles:
 
 comment:
   enable: true
-  system: waline # waline, gitalk, twikoo, giscus
+  system: waline
   config:
     # Waline comment system. See https://waline.js.org/
     waline:
@@ -237,13 +237,6 @@ comment:
       emoji: [] # Waline emojis, see https://waline.js.org/guide/features/emoji.html
       recaptchaV3Key: wasd # Google reCAPTCHA v3 key. See https://waline.js.org/reference/client/props.html#recaptchav3key
       turnstileKey: # Turnstile key. See https://waline.js.org/reference/client/props.html#turnstilekey
-    # Gitalk comment system. See https://github.com/gitalk/gitalk
-    gitalk:
-      clientID: # GitHub Application Client ID
-      clientSecret: # GitHub Application Client Secret
-      repo: # GitHub repository
-      owner: # GitHub repository owner
-      proxy: # GitHub repository proxy
     # Twikoo comment system. See https://twikoo.js.org/
     twikoo:
       version: 1.6.10 # Twikoo version, do not modify if you dont know what it is
