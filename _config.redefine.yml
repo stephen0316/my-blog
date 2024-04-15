@@ -60,7 +60,7 @@ home_banner:
   enable: true
   style: fixed # static or fixed
   image: 
-    light: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/b27.gif
+    light: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/Japan%20by%20Car%202.png
     dark: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/jamesgilleard.jpg
   title: Take Me Home,Country Roads
   subtitle:
@@ -232,7 +232,7 @@ comment:
   config:
     # Waline comment system. See https://waline.js.org/
     waline:
-      serverUrl: https://www.woooooo.cn/
+      serverUrl: https://woooooo.cn/
       lang: zh-CN 
       emoji: [] # Waline emojis, see https://waline.js.org/guide/features/emoji.html
       recaptchaV3Key: wasd # Google reCAPTCHA v3 key. See https://waline.js.org/reference/client/props.html#recaptchav3key
