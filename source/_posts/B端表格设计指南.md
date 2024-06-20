@@ -1,5 +1,5 @@
 ---
-title: B端表格设计指南
+title: 工作总结：B端表格设计思考
 categories:
   - 设计
 toc: true
