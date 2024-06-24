@@ -1041,10 +1041,10 @@ button {
 }
 .markdown-body h1,
 .markdown-body .h1 {
-  font-size: 3.2rem;
+  font-size: 2.0rem;
   font-weight: 700;
-  border-bottom: solid 2px var(--fourth-text-color);
-  margin-top: 5rem;
+  border-bottom: solid 0px var(--fourth-text-color);
+  margin-top: 4rem;
 }
 @media (max-width: 768px) {
   .markdown-body h1,

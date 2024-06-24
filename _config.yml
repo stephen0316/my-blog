@@ -107,6 +107,7 @@ deploy:
 douban:
   id: 181263519
   builtin: true
+  swup: true
   item_per_page: 10
   meta_max_line: 4
   customize_layout: 
