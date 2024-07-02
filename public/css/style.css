@@ -1041,7 +1041,7 @@ button {
 }
 .markdown-body h1,
 .markdown-body .h1 {
-  font-size: 2.0rem;
+  font-size: 2.4rem;
   font-weight: 700;
   border-bottom: solid 0px var(--fourth-text-color);
   margin-top: 4rem;
@@ -1054,10 +1054,10 @@ button {
 }
 .markdown-body h2,
 .markdown-body .h2 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 700;
   padding: 3px 0;
-  border-bottom: solid 2px var(--fourth-text-color);
+  border-bottom: solid 0px var(--fourth-text-color);
   margin-top: 4rem;
 }
 @media (max-width: 768px) {
