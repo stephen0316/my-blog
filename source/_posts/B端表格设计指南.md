@@ -8,9 +8,11 @@ tags:
   - 设计思考
 toc: true
 date: 2023-03-10
+excerpt: 结合实际项目经验，从认识表格、数据展示、数据过滤、数据操作四个方面聊一聊关于表格设计的思考
 ---
 
 最近在工作中遇到一个的需求：“为了满足MEP的市场化需求，需要支持通过liscence授权的方式实现对MEP的使用控制”。简单讲就是产品经理希望在表格的操作列里新增一个“liscence导入”按钮“：
+
 ![p](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/p.png)
 需求本身没有问题，但目前的设计存在两个明显的问题：
 
@@ -36,50 +38,68 @@ date: 2023-03-10
 操作项：附加功能，常见有新增、导入导出、自定义列表、批量操作等  
 行列分割线：视觉上对行与行、列与列之间进行分割  
 分页器：管理分页数据，视数据量大小决定是否需要
+
 ![image2](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image2.png)
 
 ### 表格类型
 #### 样式
 常见的三种样式各有利弊，需要结合实际需求选择，核心要点是：减少视觉干扰，着重信息传达。  
+
 <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image3.png" alt="image3"  />
+
 无论是斑马线还是网格线，都要避免使用过重的颜色抢走视觉重心，内容才是表格主体，需要重点展示。
+
 <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image4.png" alt="image4"  />
+
 在鼠标悬停、选中时，表格应该给予用户明显的反馈，常用颜色的轻重来区分不同状态。在使用斑马线的表格中，选中状态的颜色应该与斑马线本身的颜色作区分。
+
 ![image5](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image5.png)
 
 #### 变形
 根据不同场景需求还衍生出了几种变形表格：
 **多选/单选表格**
+
 ![image6](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image6.png)
+
 **固定行表格**
 表头固定，表格内容支持上下滚动查看。适用于数据量不大，空间有限的情况
+
 **固定列表格**
 首列/尾列固定，中间列可左右滑动查看。适用于展示数据类型较多，空间有限的情况
+
 ![image7](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image7.png)
+
 **可展开表格**
 表格行可展开，以展示更多信息。适用于内容过多或信息优先级较低时，做适当隐藏
 **嵌套子表格**
 表格行可展开，数据含父子级关系
 **树表格**
 适用于数据信息有清晰层级关系
+
 ![image8](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image8.png)
 **组合表格**
 数据间含多个包含、并属关系
+
 ![image9](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image9.png)
 
 ## 数据展示
 ### 表头
 常见的表头有三种：纯文本、分组、多功能
+
 ![image10](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image10.png)
+
 表头是对每列内容的高度概括，起到数据解释的作用。因此，表头名称尽量简练准确，在不影响词意传达情况下进行简化，既能节省空间又能减轻用户阅读压力。但在B端业务中，常常会遇到一些晦涩难懂的专业名词，这种情况可以将该字段的详细解释放进气泡组件里，通过鼠标hover触发：
+
 ![image11](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image11.png)
 **自定义表头**
 当数据列过多我们无法确定展示优先级时，我们也可以提供自定义操作，将选择权交给用户，让他们自己去选择展示哪些内容：
+
 ![image12](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image12.png)
 
 ### 单元格
 #### 单元格的内容类型
 随着工具类应用的迭代发展，单元格内容不再仅限于文本段，像价格、日期、标签、缩略图等不同数据类型应该有不同的表现形式。
+
 ![image13](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image13.png)
 很多时候需求描述非常简单，产品经理在写prd时很少会考虑到特别细致，这就要求我们拿到需求后要去思考数据背后的逻辑，从而选择合适的设计方式。以一个实际项目中遇到的需求为例：
 
@@ -88,13 +108,16 @@ date: 2023-03-10
 > ...操作列功能：开启/关闭、详情、删除，其中已关闭的功能显示开启按钮，已开启的功能显示关闭按钮...  
 
 优化思路是将状态和相关操作结合，不影响信息传达和功能需求前提下带来了更高的阅读效率和使用体验。
+
 ![image14](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image14.png)
+
 核心思想是无论使用哪种表现形式，都需要结合具体场景，不能纯粹为了视觉效果做改变，任何优化都需要确保功能的可用性、易用性。
 
 #### 单元格文本
 ##### 文本显示
 文本的字号和单元格行高是非常重要的参数，直接影响着阅读体验。常见的行高通常是4的倍数：36、40、48、64、80...
 如果数据属性数量不多，偏文本展示为主，用 40、48 的高度即可。如果数据包含缩略图、多行文本，那么建议使用 64 、80 或更大的高度
+
 ![image15](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image15.png)
 
 ##### 空数据

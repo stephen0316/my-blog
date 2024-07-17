@@ -164,7 +164,7 @@ articles:
   style:
     font_size: 16px 
     line_height: 1.5 
-    image_border_radius: 12px 
+    image_border_radius: 8px 
     image_alignment: center
     image_caption: false 
     link_icon: false
