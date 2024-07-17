@@ -1,9 +1,12 @@
 ---
-title: 工作总结：B端表格设计思考
+title: B端表格设计思考
 categories:
   - 设计
+  - 组件规范
+tags: 
+  - 工作沉淀
+  - 设计思考
 toc: true
-tags: 交互设计
 date: 2023-03-10
 ---
 

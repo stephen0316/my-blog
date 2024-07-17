@@ -2,10 +2,12 @@
 title: TV大屏体验设计经验手册
 categories:
   - 设计
-toc: true 
-tags: 
-  - 交互设计
   - 体验设计
+tags: 
+  - 设计思考
+  - 工作沉淀
+  - 体验设计
+toc: true 
 date: 2024-06-20
 ---
 

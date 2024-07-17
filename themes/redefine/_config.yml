@@ -43,7 +43,7 @@ global:
   # Whether to enable single page experience (using swup). See https://swup.js.org/. similar to pjax
   single_page: true
   
-  preloader: true
+  preloader: false
   open_graph: true
   google_analytics:
     enable: false # Whether to enable Google Analytics
@@ -148,15 +148,7 @@ home:
     first_item: info # menu, info
     announcement: 敲敲小黑板，今日店休
     links:
-      相册:
-        icon: fa-regular fa-camera
-        path: /masonry
-      书单:
-        icon: fa-light fa-books
-        path: /books
-      观影:
-        icon: fa-light fa-film
-        path: /movies
+       
 
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.

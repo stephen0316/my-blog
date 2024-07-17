@@ -2,8 +2,9 @@
 title: GPT4.0使用体验：越来越牛的AI
 categories:
   - 思考
+tags: 
+  - ChatGPT
 toc: true 
-tags: ChatGPT
 date: 2023-09-21
 ---
 

@@ -1,9 +1,12 @@
 ---
 title: 个人博客的搭建及写作
 categories:
+  - 技术涉猎
+tags: 
+  - 瞎折腾
+  - blog
   - 技术
 toc: true
-tags: blog
 date: 2023-03-01
 ---
 ## 如何搭建个人博客

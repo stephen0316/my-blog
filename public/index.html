@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Hexo Theme Redefine">
     
-    <meta name="author" content="stephen">
+    <meta name="author" content="Stephen">
     <!-- preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,158 +40,11 @@
     
     <title>
         
-        Antidote
+        Stephen
     </title>
 
     <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Chillax/chillax.css">
 
-    
-        <style>
-    :root {
-        --preloader-background-color: #fff;
-        --preloader-text-color: #000;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --preloader-background-color: #202124;
-            --preloader-text-color: #fff;
-        }
-    }
-
-    @media (prefers-color-scheme: light) {
-        :root {
-            --preloader-background-color: #fff;
-            --preloader-text-color: #000;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .ml13 {
-            font-size: 2.6rem !important; /* Adjust this value as needed */
-        }
-    }
-
-    .preloader {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        padding: 12px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh; /* 'h-screen' is 100% of the viewport height */
-        background-color: var(--preloader-background-color);
-        z-index: 1100; /* 'z-[1100]' sets the z-index */
-        transition: opacity 0.2s ease-in-out;
-    }
-
-    .ml13 {
-        font-size: 3.2rem;
-        /* text-transform: uppercase; */
-        color: var(--preloader-text-color);
-        letter-spacing: -1px;
-        font-weight: 500;
-        font-family: 'Chillax-Variable', sans-serif;
-        text-align: center;
-    }
-
-    .ml13 .word {
-        display: inline-flex;
-        flex-wrap: wrap;
-        white-space: nowrap;
-    }
-
-    .ml13 .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-</style>
-
-<div class="preloader">
-    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/anime.min.js"></script>
-    <h1 class="ml13">
-        Antidote
-    </h1>
-    <script>
-        var textWrapper = document.querySelector('.ml13');
-        // Split text into words
-        var words = textWrapper.textContent.trim().split(' ');
-
-        // Clear the existing content
-        textWrapper.innerHTML = '';
-
-        // Wrap each word and its letters in spans
-        words.forEach(function(word) {
-            var wordSpan = document.createElement('span');
-            wordSpan.classList.add('word');
-            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
-            textWrapper.appendChild(wordSpan);
-            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
-        });
-
-
-        anime.timeline({loop: true})
-            .add({
-                targets: '.ml13 .letter',
-                translateY: [100,0],
-                translateZ: 0,
-                opacity: [0,1],
-                easing: "easeOutExpo",
-                duration: 1400,
-                delay: (el, i) => 300 + 30 * i
-            }).add({
-            targets: '.ml13 .letter',
-            translateY: [0,-100],
-            opacity: [1,0],
-            easing: "easeInExpo",
-            duration: 1200,
-            delay: (el, i) => 100 + 30 * i
-        });
-
-        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
-
-        // If the theme status is not found in local storage, check the preferred color scheme
-        if (themeStatus === undefined || themeStatus === null) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                themeStatus = 'dark';
-            } else {
-                themeStatus = 'light';
-            }
-        }
-
-        // Now you can use the themeStatus variable in your code
-        if (themeStatus) {
-            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
-            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
-        } else {
-            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
-            document.documentElement.style.setProperty('--preloader-text-color', '#000');
-        }
-
-        window.addEventListener('load', function () {
-            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
-        });
-
-        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
-        hidePreloaderAfterTimeout(5000);
-
-        function hidePreloaderAfterTimeout(delay) {
-            setTimeout(function () {
-                var preloader = document.querySelector('.preloader');
-                preloader.style.opacity = '0';
-                setTimeout(function () {
-                    preloader.style.display = 'none';
-                }, 200);
-            }, delay);
-        }
-    </script>
-</div>
     
 
     
@@ -218,7 +71,7 @@
     
     <script id="hexo-configurations">
     window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"12px","image_alignment":"center","image_caption":false,"link_icon":false,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["UE designer"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":true,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":false},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/Japan%20by%20Car%202.png","dark":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/jamesgilleard.jpg"},"title":"Take Me Home,Country Roads","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8 rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"【钢琴】渔光曲","artist":"昼夜","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2%20-%20001%20-%20%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/yuguangqu.jpg"},{"name":"梁祝","artist":"吕思清","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E6%A2%81%E7%A5%9D.MP3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.10.11.png"},{"name":"Merry Christmas Mr. Lawrence","artist":"坂本龍一","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawrence%E3%80%8B%E5%9C%A3%E8%AF%9E%E5%BF%AB%E4%B9%90%EF%BC%8C%E5%8A%B3%E4%BC%A6%E6%96%AF%E5%85%88%E7%94%9F-%E3%80%8A1996%E3%80%8B%E3%80%90Hi-Res%E3%80%91%20-%20001%20-%20%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawr%E2%80%A6.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"path":"/about","icon":"fa-regular fa-address-card"},"看什么":{"icon":"fa-regular fa-eyes","submenus":{"书单":"/books","观影":"/movies"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"今日店休","links":{"相册":{"icon":"fa-regular fa-camera","path":"/masonry"},"书单":{"icon":"fa-light fa-books","path":"/books"},"观影":{"icon":"fa-light fa-film","path":"/movies"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/1/17 11:45:14"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"12px","image_alignment":"center","image_caption":false,"link_icon":false,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["UE designer"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":true,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":false},"single_page":true,"preloader":false,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/Japan%20by%20Car%202.png","dark":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/jamesgilleard.jpg"},"title":"Hey there,I'm Stephen","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8 rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"【钢琴】渔光曲","artist":"昼夜","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2%20-%20001%20-%20%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/yuguangqu.jpg"},{"name":"梁祝","artist":"吕思清","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E6%A2%81%E7%A5%9D.MP3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.10.11.png"},{"name":"Merry Christmas Mr. Lawrence","artist":"坂本龍一","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawrence%E3%80%8B%E5%9C%A3%E8%AF%9E%E5%BF%AB%E4%B9%90%EF%BC%8C%E5%8A%B3%E4%BC%A6%E6%96%AF%E5%85%88%E7%94%9F-%E3%80%8A1996%E3%80%8B%E3%80%90Hi-Res%E3%80%91%20-%20001%20-%20%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawr%E2%80%A6.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"path":"/about","icon":"fa-regular fa-address-card"},"categories":{"path":"/categories","icon":"fa-light fa-rectangle-list"},"猫片":{"path":"/masonry","icon":"fa-regular fa-camera"},"看什么":{"icon":"fa-regular fa-eyes","submenus":{"书单":"/books","观影":"/movies"}}},"search":{"enable":false,"preload":false}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"指路牌","links":{"设计":{"icon":"fa-regular fa-hashtag","path":"http://172.20.175.184:4000/categories/%E8%AE%BE%E8%AE%A1/"},"阅读":{"icon":"fa-regular fa-hashtag","path":"http://172.20.175.184:4000/categories/%E5%BC%80%E7%9C%BC/"},"旅行":{"icon":"fa-regular fa-hashtag","path":"http://172.20.175.184:4000/categories/%E6%97%85%E8%A1%8C/"},"思考":{"icon":"fa-regular fa-hashtag","path":"http://172.20.175.184:4000/categories/%E6%80%9D%E8%80%83/"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/1/17 11:45:14"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     window.data = {"masonry":true};
   </script>
@@ -229,8 +82,16 @@
     <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/solid.min.css">
     <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/regular.min.css">
     
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/thin.min.css">
     
     
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/light.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/duotone.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/sharp-solid.min.css">
     
 <meta name="generator" content="Hexo 7.0.0"></head>
 
@@ -293,7 +154,7 @@
         <div class="description flex flex-col justify-center items-center w-screen font-medium text-center"
         
         >
-            Take Me Home,Country Roads
+            Hey there,I'm Stephen
             
             
                 <p><i id="subtitle"></i></p>
@@ -326,7 +187,7 @@
             
             <a class="logo-title" href="/">
                 <h1>
-                Antidote
+                Stephen
                 </h1>
             </a>
         </div>
@@ -380,6 +241,40 @@
                                         >
                                     <i class="fa-regular fa-address-card fa-fw"></i>
                                     关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-light fa-rectangle-list fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/masonry"
+                                        >
+                                    <i class="fa-regular fa-camera fa-fw"></i>
+                                    猫片
                                     
                                 </a>
 
@@ -500,6 +395,46 @@
                 
                     
 
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-light fa-rectangle-list fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/masonry"
+                        >
+                            <span>
+                                猫片
+                            </span>
+                            
+                                <i class="fa-regular fa-camera fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
                     <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
                         
                         <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
@@ -535,11 +470,11 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
@@ -568,18 +503,18 @@
     <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
 </div>
                 <div class="author flex flex-col justify-center my-2.5 mx-0">
-    <div class="name">stephen</div>
+    <div class="name">Stephen</div>
     
         <div class="label">UE designer</div>
     
 </div>
                 <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
@@ -594,36 +529,45 @@
 
                         
                             <div class="announcement">
-                                今日店休
+                                指路牌
                             </div>
                         
                     </div>
                     
                         
                             
-                                <a class="links" href="/masonry">
+                                <a class="links" target="_blank" rel="noopener" href="http://172.20.175.184:4000/categories/%E8%AE%BE%E8%AE%A1/">
                                     
-                                        <i class="fa-regular fa-camera icon-space"></i>
+                                        <i class="fa-regular fa-hashtag icon-space"></i>
                                     
-                                    <span class="link-name">相册</span>
+                                    <span class="link-name">设计</span>
                                 </a>
                             
                         
                             
-                                <a class="links" href="/books">
+                                <a class="links" target="_blank" rel="noopener" href="http://172.20.175.184:4000/categories/%E5%BC%80%E7%9C%BC/">
                                     
-                                        <i class="fa-light fa-books icon-space"></i>
+                                        <i class="fa-regular fa-hashtag icon-space"></i>
                                     
-                                    <span class="link-name">书单</span>
+                                    <span class="link-name">阅读</span>
                                 </a>
                             
                         
                             
-                                <a class="links" href="/movies">
+                                <a class="links" target="_blank" rel="noopener" href="http://172.20.175.184:4000/categories/%E6%97%85%E8%A1%8C/">
                                     
-                                        <i class="fa-light fa-film icon-space"></i>
+                                        <i class="fa-regular fa-hashtag icon-space"></i>
                                     
-                                    <span class="link-name">观影</span>
+                                    <span class="link-name">旅行</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" target="_blank" rel="noopener" href="http://172.20.175.184:4000/categories/%E6%80%9D%E8%80%83/">
+                                    
+                                        <i class="fa-regular fa-hashtag icon-space"></i>
+                                    
+                                    <span class="link-name">思考</span>
                                 </a>
                             
                         
@@ -686,6 +630,16 @@
                     
                     
                 
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1/%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1/">体验设计</a>&nbsp;
+                        </li>
+                    
+                    
+                
             </ul>
         </span>
         
@@ -696,7 +650,12 @@
                     
                         <li>
                             
-                            <a href="/tags/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/">交互设计</a>&nbsp;
+                            <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B2%89%E6%B7%80/">工作沉淀</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/">设计思考</a>&nbsp;
                         </li>
                     
                         <li>
@@ -720,9 +679,17 @@
                 
 
                 
+                    
+                
 
                 
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/05/21/%E6%B3%B0%E5%9B%BD%E6%B8%B8%E8%AE%B0/">
+                            <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/202406091616662.png" alt="泰国印象：大海、落日与繁华背后" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
                     <h3 class="home-article-title">
                         <a href="/2024/05/21/%E6%B3%B0%E5%9B%BD%E6%B8%B8%E8%AE%B0/">
                             泰国印象：大海、落日与繁华背后
@@ -755,6 +722,16 @@
                         
                         <li>
                             <a href="/categories/%E6%97%85%E8%A1%8C/">旅行</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E6%97%85%E8%A1%8C/%E6%B3%B0%E5%9B%BD/">泰国</a>&nbsp;
                         </li>
                     
                     
@@ -825,7 +802,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E7%9C%BC/">开眼</a>&nbsp;
+                            <a href="/categories/%E9%98%85%E8%AF%BB/">阅读</a>&nbsp;
                         </li>
                     
                     
@@ -852,7 +829,7 @@
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
                         <a href="/2024/02/26/%E5%A4%9A%E5%AA%92%E4%BD%93%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
-                            多媒体解决方案
+                            个人博客的多媒体解决方案
                         </a>
                     </h3>
 
@@ -889,9 +866,26 @@
         </span>
         
         
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/blog/">blog</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
 
-    <a href="/2024/02/26/%E5%A4%9A%E5%AA%92%E4%BD%93%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">阅读全文<span class="seo-reader-text">多媒体解决方案</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/02/26/%E5%A4%9A%E5%AA%92%E4%BD%93%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">阅读全文<span class="seo-reader-text">个人博客的多媒体解决方案</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -939,7 +933,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E7%9C%BC/">开眼</a>&nbsp;
+                            <a href="/categories/%E9%98%85%E8%AF%BB/">阅读</a>&nbsp;
                         </li>
                     
                     
@@ -999,7 +993,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E7%9C%BC/">开眼</a>&nbsp;
+                            <a href="/categories/%E9%98%85%E8%AF%BB/">阅读</a>&nbsp;
                         </li>
                     
                     
@@ -1064,6 +1058,16 @@
                         
                         <li>
                             <a href="/categories/%E6%97%85%E8%A1%8C/">旅行</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E6%97%85%E8%A1%8C/%E5%8C%97%E4%BA%AC/">北京</a>&nbsp;
                         </li>
                     
                     
@@ -1139,7 +1143,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E7%9C%BC/">开眼</a>&nbsp;
+                            <a href="/categories/%E9%98%85%E8%AF%BB/">阅读</a>&nbsp;
                         </li>
                     
                     
@@ -1204,7 +1208,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E7%9C%BC/">开眼</a>&nbsp;
+                            <a href="/categories/%E9%98%85%E8%AF%BB/">阅读</a>&nbsp;
                         </li>
                     
                     
@@ -1262,7 +1266,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E5%BC%80%E7%9C%BC/">开眼</a>&nbsp;
+                            <a href="/categories/%E9%98%85%E8%AF%BB/">阅读</a>&nbsp;
                         </li>
                     
                     
@@ -1308,7 +1312,7 @@
               <span>2023</span>
               -
             
-            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">stephen</a>
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Stephen</a>
         </div>
         
             <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -1474,6 +1478,8 @@
     <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/masonry.js"></script>
 
 
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/anime.min.js"></script>'
 
 
 <div class="post-scripts" data-swup-reload-script>
