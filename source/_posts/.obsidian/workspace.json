@@ -15,11 +15,24 @@
               "state": {
                 "file": "TV体验设计经验手册.md",
                 "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "e2cff4ff806d2d03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "template/front-matter.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,6 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "template/front-matter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未命名.md"
+                "file": "template/front-matter.md"
               }
             }
           }
@@ -127,7 +141,9 @@
   "active": "6c652cb901111d93",
   "lastOpenFiles": [
     "TV体验设计经验手册.md",
-    "未命名.md",
+    "template/front-matter.md",
+    "template",
+    "2024-03-30.md",
     "2024-02-25.md",
     "常看常新的技术常识.md",
     "2024-01-31.md",
@@ -151,8 +167,6 @@
     "New Bing使用体验，越来越牛的AI.md",
     "云南.md",
     "2024-01-04.md",
-    "常看常新的技术常识~.md",
-    "2023-12-05~.md",
-    "2023-12-28~.md"
+    "常看常新的技术常识~.md"
   ]
 }
