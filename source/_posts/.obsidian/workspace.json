@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "28e5030879cc47cb",
+        "id": "161edd659686842d",
         "type": "tabs",
         "children": [
           {
-            "id": "7bcc8961470a115d",
+            "id": "db2251ff2436c9d6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TV体验设计经验手册.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "e2cff4ff806d2d03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "template/front-matter.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "template/front-matter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,18 +99,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "template/front-matter.md"
-              }
+              "state": {}
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -138,14 +117,18 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6c652cb901111d93",
+  "active": "db2251ff2436c9d6",
   "lastOpenFiles": [
     "TV体验设计经验手册.md",
+    "B端表格设计指南.md",
+    "Blog的搭建与写作.md",
     "template/front-matter.md",
+    "New Bing使用体验，越来越牛的AI.md",
+    "多媒体解决方案.md",
+    "常看常新的技术常识.md",
     "template",
     "2024-03-30.md",
     "2024-02-25.md",
-    "常看常新的技术常识.md",
     "2024-01-31.md",
     "2023-11-09.md",
     "四姑娘山.md",
@@ -161,10 +144,7 @@
     "2023-12-29.md",
     "2023-12-28 (copy).md",
     "IMG_3494.jpeg",
-    "B端表格设计指南.md",
-    "Blog的搭建与写作.md",
     "processing.md",
-    "New Bing使用体验，越来越牛的AI.md",
     "云南.md",
     "2024-01-04.md",
     "常看常新的技术常识~.md"
