@@ -11,11 +11,28 @@
             "id": "db2251ff2436c9d6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "2024-02-25.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7b330ce6936da47a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "实例拆解：可用性测试经验总结.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -73,6 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "实例拆解：可用性测试经验总结.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +117,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "实例拆解：可用性测试经验总结.md"
+              }
             }
           }
         ],
@@ -107,7 +127,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -117,24 +138,26 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "db2251ff2436c9d6",
+  "active": "7b330ce6936da47a",
   "lastOpenFiles": [
-    "TV体验设计经验手册.md",
-    "B端表格设计指南.md",
     "Blog的搭建与写作.md",
-    "template/front-matter.md",
+    "实例拆解：可用性测试经验总结.md",
+    "B端表格设计指南.md",
     "New Bing使用体验，越来越牛的AI.md",
+    "2023-10-13.md",
+    "111.md",
+    "2024-01-31.md",
+    "2024-02-25.md",
+    "TV体验设计经验手册.md",
+    "template/front-matter.md",
     "多媒体解决方案.md",
     "常看常新的技术常识.md",
     "template",
     "2024-03-30.md",
-    "2024-02-25.md",
-    "2024-01-31.md",
     "2023-11-09.md",
     "四姑娘山.md",
     "2023-12-05.md",
     "2023-12-28.md",
-    "2023-10-13.md",
     "模版/blog.md",
     "模版",
     "2024-01-26.md",
@@ -145,8 +168,6 @@
     "2023-12-28 (copy).md",
     "IMG_3494.jpeg",
     "processing.md",
-    "云南.md",
-    "2024-01-04.md",
-    "常看常新的技术常识~.md"
+    "云南.md"
   ]
 }
