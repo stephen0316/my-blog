@@ -161,19 +161,19 @@ home:
     links:
       设计:
         icon: fa-regular fa-hashtag
-        path: http://172.20.175.184:4000/categories/%E8%AE%BE%E8%AE%A1/
+        path: https://woooooo.cn/categories/%E8%AE%BE%E8%AE%A1/
       
       阅读:
         icon: fa-regular fa-hashtag
-        path: http://172.20.175.184:4000/categories/%E5%BC%80%E7%9C%BC/
+        path: https://woooooo.cn/categories/%E9%98%85%E8%AF%BB/
 
       旅行:
         icon: fa-regular fa-hashtag
-        path: http://172.20.175.184:4000/categories/%E6%97%85%E8%A1%8C/
+        path: https://woooooo.cn/categories/%E6%97%85%E8%A1%8C/
 
       思考:
         icon: fa-regular fa-hashtag
-        path: http://172.20.175.184:4000/categories/%E6%80%9D%E8%80%83/
+        path: https://woooooo.cn/categories/%E6%80%9D%E8%80%83/
 
       
 
