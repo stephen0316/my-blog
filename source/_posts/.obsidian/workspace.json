@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "实例拆解：可用性测试经验总结.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -140,15 +140,17 @@
   },
   "active": "7b330ce6936da47a",
   "lastOpenFiles": [
-    "Blog的搭建与写作.md",
-    "实例拆解：可用性测试经验总结.md",
-    "B端表格设计指南.md",
+    "TV体验设计经验手册.md",
     "New Bing使用体验，越来越牛的AI.md",
+    "Blog的搭建与写作.md",
+    "B端表格设计指南.md",
+    "云南.md",
+    "泰国游记.md",
+    "实例拆解：可用性测试经验总结.md",
     "2023-10-13.md",
     "111.md",
     "2024-01-31.md",
     "2024-02-25.md",
-    "TV体验设计经验手册.md",
     "template/front-matter.md",
     "多媒体解决方案.md",
     "常看常新的技术常识.md",
@@ -166,8 +168,6 @@
     "2023-12-29~.md",
     "2023-12-29.md",
     "2023-12-28 (copy).md",
-    "IMG_3494.jpeg",
-    "processing.md",
-    "云南.md"
+    "IMG_3494.jpeg"
   ]
 }
