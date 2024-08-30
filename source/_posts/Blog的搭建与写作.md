@@ -4,12 +4,14 @@ categories:
   - 技术涉猎
 tags: 
   - 瞎折腾
-  - blog
   - 技术
 toc: true
 date: 2023-03-01
 excerpt: 作为本站的第一篇文章，分享一下如何从0开始搭建个人博客吧，涉及域名购买、博客框架选择、框架安装、代码托管、部署以及一些零散的知识点
 ---
+
+
+
 ## 如何搭建个人博客
 ### 买域名
 - [godaddy.com](https://sg.godaddy.com/)
