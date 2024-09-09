@@ -11,8 +11,12 @@
             "id": "0c6681e727c547dc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "B端表格设计指南.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "B端表格设计指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "B端表格设计指南.md"
+              }
             }
           }
         ],
@@ -120,8 +127,9 @@
   },
   "active": "0c6681e727c547dc",
   "lastOpenFiles": [
-    "B端表格设计指南.md",
+    "New Bing使用体验，越来越牛的AI.md",
     "Pasted image 20240909185400.png",
+    "B端表格设计指南.md",
     "TV体验设计经验手册.md",
     "Blog的搭建与写作.md",
     "实例拆解：可用性测试经验总结.md",
@@ -129,7 +137,6 @@
     "Pasted image 20240830164031.png",
     "Pasted image 20240830163521.png",
     "Pasted image 20240830164041.png",
-    "New Bing使用体验，越来越牛的AI.md",
     "2024-01-31.md",
     "泰国游记.md",
     "多媒体解决方案.md",

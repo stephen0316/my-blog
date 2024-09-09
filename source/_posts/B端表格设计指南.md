@@ -164,7 +164,7 @@ excerpt: 结合实际项目经验，从认识表格、数据展示、数据过�
 ![30](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/30.png)
 ### 下拉筛选
 最常见的筛选方式，空间利用率高，操作相对简单。主要有以下几种类型：
-![[Pasted image 20240909185400.png]]
+![](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20240909185435.png)
 当选项较多时，建议加上搜索功能帮助用户快速定位目标选项
 
 ### 表头筛选
