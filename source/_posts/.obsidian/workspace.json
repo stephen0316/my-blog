@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-02-25.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7b330ce6936da47a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "实例拆解：可用性测试经验总结.md",
+                "file": "B端表格设计指南.md",
                 "mode": "source",
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "实例拆解：可用性测试经验总结.md",
+                "file": "B端表格设计指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "实例拆解：可用性测试经验总结.md"
+                "file": "B端表格设计指南.md"
               }
             }
           }
@@ -138,23 +125,24 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7b330ce6936da47a",
+  "active": "db2251ff2436c9d6",
   "lastOpenFiles": [
-    "Pasted image 20240830164041.png",
+    "Pasted image 20240909185400.png",
+    "TV体验设计经验手册.md",
+    "Blog的搭建与写作.md",
+    "实例拆解：可用性测试经验总结.md",
+    "2024-02-25.md",
     "Pasted image 20240830164031.png",
     "Pasted image 20240830163521.png",
+    "Pasted image 20240830164041.png",
+    "New Bing使用体验，越来越牛的AI.md",
+    "2024-01-31.md",
     "泰国游记.md",
     "多媒体解决方案.md",
-    "实例拆解：可用性测试经验总结.md",
     "B端表格设计指南.md",
-    "Blog的搭建与写作.md",
-    "TV体验设计经验手册.md",
-    "New Bing使用体验，越来越牛的AI.md",
     "云南.md",
     "2023-10-13.md",
     "111.md",
-    "2024-01-31.md",
-    "2024-02-25.md",
     "template/front-matter.md",
     "常看常新的技术常识.md",
     "template",
