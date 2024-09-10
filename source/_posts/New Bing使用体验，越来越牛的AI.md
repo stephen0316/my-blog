@@ -1,9 +1,10 @@
 ---
 title: GPT4.0使用体验：越来越牛的AI
 categories:
-  - 思考
+  - 🦐折腾
 tags: 
   - ChatGPT
+  - AI
 toc: true 
 date: 2023-09-21
 ---

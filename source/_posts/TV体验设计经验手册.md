@@ -2,7 +2,6 @@
 title: TV大屏体验设计经验手册
 categories:
   - 设计
-  - 体验设计
 tags: 
   - 设计思考
   - 工作沉淀
