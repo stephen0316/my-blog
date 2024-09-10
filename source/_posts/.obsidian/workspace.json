@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "e8a5b40b14a5333e",
+        "id": "6f4a6982c37cf074",
         "type": "tabs",
         "children": [
           {
-            "id": "0c6681e727c547dc",
+            "id": "4bedbe4fef114d16",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TV体验设计经验手册.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TV体验设计经验手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "TV体验设计经验手册.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -125,19 +118,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0c6681e727c547dc",
+  "active": "4bedbe4fef114d16",
   "lastOpenFiles": [
-    "New Bing使用体验，越来越牛的AI.md",
+    "TV体验设计经验手册.md",
+    "泰国游记.md",
     "Blog的搭建与写作.md",
     "B端表格设计指南.md",
+    "New Bing使用体验，越来越牛的AI.md",
     "云南.md",
     "元旦旅行.md",
-    "泰国游记.md",
     "实例拆解：可用性测试经验总结.md",
     "多媒体解决方案.md",
     "常看常新的技术常识.md",
     "Pasted image 20240909185400.png",
-    "TV体验设计经验手册.md",
     "2024-02-25.md",
     "Pasted image 20240830164031.png",
     "Pasted image 20240830163521.png",

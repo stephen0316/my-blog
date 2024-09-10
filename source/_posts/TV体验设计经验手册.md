@@ -9,6 +9,7 @@ tags:
 toc: true 
 excerpt: 一个由工作项目引发的思考
 date: 2024-06-20
+cover: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/bastian-riccardi-JKfDuqD90pI-unsplash.jpg
 ---
 
 近期在负责一个会议系统的体验设计，该系统部署的客户端众多，除了常见的移动端、PC 端外，还涉及到SVC 端和可视电话端（简单理解为带听筒的 pad）。其中 SVC 端又分为硬终端（自带会议系统的TV）和软终端（自带会议软件的机顶盒）。
