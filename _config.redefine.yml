@@ -122,9 +122,6 @@ navbar:
       path: /about
       icon: fa-regular fa-address-card
 
-    猫片:
-      path: /masonry
-      icon: fa-regular fa-camera
 
     看什么:
       icon: fa-regular fa-eyes
