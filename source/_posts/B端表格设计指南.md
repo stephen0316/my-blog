@@ -2,8 +2,7 @@
 title: B端表格设计思考
 categories:
   - 设计
-  - 组件规范
-tags: 
+tags:
   - 工作沉淀
   - 设计思考
 toc: true
