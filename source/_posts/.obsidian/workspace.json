@@ -16,10 +16,27 @@
                 "file": "B端表格设计指南.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "B端表格设计指南"
+            }
+          },
+          {
+            "id": "c229425982c0da61",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "推理文学入坑指南.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "推理文学入坑指南"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -39,7 +56,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -54,7 +73,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           }
         ]
@@ -77,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "B端表格设计指南.md",
+                "file": "推理文学入坑指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,7 +106,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "推理文学入坑指南 的反向链接列表"
             }
           },
           {
@@ -96,7 +119,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           },
           {
@@ -105,8 +130,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "B端表格设计指南.md"
-              }
+                "file": "推理文学入坑指南.md"
+              },
+              "icon": "lucide-list",
+              "title": "推理文学入坑指南 的大纲"
             }
           }
         ],
@@ -125,18 +152,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4bedbe4fef114d16",
+  "active": "c229425982c0da61",
   "lastOpenFiles": [
+    "实例拆解：可用性测试经验总结.md",
+    "常看常新的技术常识.md",
+    "多媒体解决方案.md",
     "New Bing使用体验，越来越牛的AI.md",
     "Blog的搭建与写作.md",
-    "实例拆解：可用性测试经验总结.md",
-    "B端表格设计指南.md",
-    "TV体验设计经验手册.md",
-    "多媒体解决方案.md",
-    "泰国游记.md",
     "云南.md",
+    "泰国游记.md",
+    "推理文学入坑指南.md",
     "元旦旅行.md",
-    "常看常新的技术常识.md",
+    "TV体验设计经验手册.md",
+    "B端表格设计指南.md",
     "Pasted image 20240909185400.png",
     "2024-02-25.md",
     "Pasted image 20240830164031.png",
@@ -158,7 +186,6 @@
     "博弈论.md",
     "2024-0126-.md",
     "2023-12-29~.md",
-    "2023-12-29.md",
     "IMG_3494.jpeg"
   ]
 }
