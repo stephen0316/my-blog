@@ -1,5 +1,5 @@
 ---
-title: B端表格设计思考
+title: B端交互设计经验手册：表格篇
 categories:
   - 设计
 tags:
