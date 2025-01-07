@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "用户研究中的开放式问题与封闭式问题.md",
+                "file": "泰国游记.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "用户研究中的开放式问题与封闭式问题"
+              "title": "泰国游记"
             }
           }
         ],
@@ -72,7 +72,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -160,18 +160,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
     }
   },
   "active": "78b98dbc511620a2",
   "lastOpenFiles": [
+    "用户研究中的开放式问题与封闭式问题.md",
     "TV体验设计经验手册.md",
     "云南.md",
     "元旦旅行.md",
-    "用户研究中的开放式问题与封闭式问题.md",
     "推理文学入坑指南.md",
     "Blog的搭建与写作.md",
     "B端表格设计指南.md",
