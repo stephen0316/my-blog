@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "元旦旅行.md",
+                "file": "B端表格设计指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "元旦旅行"
+              "title": "B端表格设计指南"
             }
           }
         ]
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -139,12 +140,12 @@
   },
   "active": "4bedbe4fef114d16",
   "lastOpenFiles": [
+    "元旦旅行.md",
     "B端表格设计指南.md",
     "TV体验设计经验手册.md",
     "泰国游记.md",
     "用户研究中的开放式问题与封闭式问题.md",
     "云南.md",
-    "元旦旅行.md",
     "推理文学入坑指南.md",
     "Blog的搭建与写作.md",
     "实例拆解：可用性测试经验总结.md",
