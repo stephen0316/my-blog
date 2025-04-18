@@ -24,7 +24,7 @@
     
         <meta name="description" content="结合实际项目经验，从认识表格、数据展示、数据过滤、数据操作四个方面聊一聊关于表格设计的思考">
 <meta property="og:type" content="article">
-<meta property="og:title" content="B端表格设计思考">
+<meta property="og:title" content="B端交互设计经验手册：表格篇">
 <meta property="og:url" content="http://example.com/2023/03/10/B%E7%AB%AF%E8%A1%A8%E6%A0%BC%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="结合实际项目经验，从认识表格、数据展示、数据过滤、数据操作四个方面聊一聊关于表格设计的思考">
@@ -60,7 +60,7 @@
 <meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/28.png">
 <meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/29.png">
 <meta property="article:published_time" content="2023-03-09T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-20T07:49:04.011Z">
+<meta property="article:modified_time" content="2025-04-02T15:29:37.934Z">
 <meta property="article:author" content="antidote">
 <meta property="article:tag" content="工作沉淀">
 <meta property="article:tag" content="设计思考">
@@ -77,7 +77,7 @@
     
     <title>
         
-            B端表格设计思考 -
+            B端交互设计经验手册：表格篇 -
         
         Love Tomato
     </title>
@@ -415,7 +415,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">13</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -423,7 +423,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -449,7 +449,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-4xl font-bold px-2 sm:px-6 md:px-8 py-3">B端表格设计思考</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-4xl font-bold px-2 sm:px-6 md:px-8 py-3">B端交互设计经验手册：表格篇</h1>
                 </div>
             
             </div>
@@ -510,7 +510,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.1k 字</span>
         </span>
     
     
@@ -530,7 +530,7 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <p>最近在工作中遇到一个的需求：“为了满足MEP的市场化需求，需要支持通过liscence授权的方式实现对MEP的使用控制”。简单讲就是产品经理希望在表格的操作列里新增一个“liscence导入”按钮“：</p>
+            <p>最近在工作中遇到一个的需求：“为了满足MEP的市场化需求，需要支持通过liscence授权的方式实现对MEP的使用控制”。简单讲就是产品经理希望在表格的操作列里新增一个“liscence导入”按钮：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
@@ -539,7 +539,7 @@
                 ><br>需求本身没有问题，但目前的设计存在两个明显的问题：</p>
 <ul>
 <li>操作列已经容纳了多个按钮，过多的操作项会让用户倍感压力；</li>
-<li>操作项之间没有明显的轻重之分，而“展示重要的，隐藏不必要的”是设计中的黄金定律。</li>
+<li>所有操作项平铺，缺少重点；</li>
 </ul>
 <p>在解决问题的过程中，我发现看似简单的表格其实藏着很多值得研究的细节。本篇文章，便是我在整个研究过程中的收获总结，共分为认识表格、数据展示、数据过滤、数据操作四个部分。  </p>
 <h1 id="认识表格"><a href="#认识表格" class="headerlink" title="认识表格"></a>认识表格</h1><h2 id="表格用途"><a href="#表格用途" class="headerlink" title="表格用途"></a>表格用途</h2><p>表格是数据的载体，作为B端项目最常出镜的组件之一，它常应用于：</p>
@@ -555,7 +555,7 @@
                      data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image2.png"
                       alt="image2"
                 ></p>
-<h2 id="表格类型"><a href="#表格类型" class="headerlink" title="表格类型"></a>表格类型</h2><h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><p>常见的三种样式各有利弊，需要结合实际需求选择，核心要点是：减少视觉干扰，着重信息传达。  </p>
+<h2 id="表格类型"><a href="#表格类型" class="headerlink" title="表格类型"></a>表格类型</h2><h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><p>常见的三种样式有斑马线、网格、水平分割线。三种类型各有利弊，需要结合实际需求选择，核心要点是：减少视觉干扰，着重信息传达。  </p>
 <img  
                      lazyload
                      src="/images/loading.svg"
@@ -585,8 +585,8 @@
                      data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/image6.png"
                       alt="image6"
                 ></p>
-<p><strong>固定行表格</strong><br>表头固定，表格内容支持上下滚动查看。适用于数据量不大，空间有限的情况</p>
-<p><strong>固定列表格</strong><br>首列&#x2F;尾列固定，中间列可左右滑动查看。适用于展示数据类型较多，空间有限的情况</p>
+<p><strong>固定行表格</strong><br>表头固定，表格内容支持上下滚动查看。适用于情况有：<br>1、数据量不大，页面纵向空间有限；<br>2、列数据不易理解或不易区分，需要频繁查看表头信息。</p>
+<p><strong>固定列表格</strong><br>首列&#x2F;尾列固定，中间列可左右滑动查看。适用情况有：<br>1、列数据较多，页面横向空间有限；<br>2、某个数据特别重要，是整个表格的主体。如一个班级学生的信息表，“姓名”这列数据便是主体，可固定在首列。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
@@ -877,7 +877,7 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">B端表格设计思考</div>
+        <div class="page-title">B端交互设计经验手册：表格篇</div>
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A4%E8%AF%86%E8%A1%A8%E6%A0%BC"><span class="nav-text">认识表格</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E7%94%A8%E9%80%94"><span class="nav-text">表格用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E6%9E%84%E6%88%90"><span class="nav-text">表格构成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E7%B1%BB%E5%9E%8B"><span class="nav-text">表格类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E5%BC%8F"><span class="nav-text">样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E5%BD%A2"><span class="nav-text">变形</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA"><span class="nav-text">数据展示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%A4%B4"><span class="nav-text">表头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%A0%BC"><span class="nav-text">单元格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%A0%BC%E7%9A%84%E5%86%85%E5%AE%B9%E7%B1%BB%E5%9E%8B"><span class="nav-text">单元格的内容类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%A0%BC%E6%96%87%E6%9C%AC"><span class="nav-text">单元格文本</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4"><span class="nav-text">数据过滤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E9%80%89"><span class="nav-text">筛选</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E6%96%B9%E7%AD%9B%E9%80%89"><span class="nav-text">上方筛选</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E6%8B%89%E7%AD%9B%E9%80%89"><span class="nav-text">下拉筛选</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E5%A4%B4%E7%AD%9B%E9%80%89"><span class="nav-text">表头筛选</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tab%E6%A0%87%E7%AD%BE"><span class="nav-text">tab标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2"><span class="nav-text">搜索</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="nav-text">数据操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E8%A1%8C%E6%93%8D%E4%BD%9C"><span class="nav-text">单行操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C"><span class="nav-text">批量操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E6%93%8D%E4%BD%9C"><span class="nav-text">全局操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol>
 
     </div>
