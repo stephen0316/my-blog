@@ -35,7 +35,7 @@
         <% } %>
     </div>
     <div class="page-template-comments">
-        <% if (page.hasOwnProperty('comment') && (page.comment === true || page.comments === true) ) { %>
+        <% if (page.hasOwnProperty('comment') && (page.comment === false || page.comments === false) ) { %>
             <%- partial('_partials/comments/comment') %>
         <% } %>
     </div>
