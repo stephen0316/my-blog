@@ -212,7 +212,7 @@ articles:
     skip_dirs: []
 
 comment:
-  enable: true
+  enable: false
   system: waline # waline, gitalk, twikoo, giscus
   config:
     # Waline comment system. See https://waline.js.org/
