@@ -59,7 +59,7 @@ home_banner:
   enable: true
   style: fixed # static or fixed
   image: 
-    light: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_0637.PNG
+    light: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/maxim-berg-XTGTa3Ry6H4-unsplash.jpg
     dark: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/4.webp
   
   title: Hiding In The Darkness

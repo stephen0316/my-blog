@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Hang">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2025/02/16/app设置页面的“保存”按钮必要吗/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="在一个配置页面中，是否使用“保存”按钮是一个重要的交互决策，它直接影响用户体验的流畅性和操作的明确性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="App设置页面的“保存”按钮必要吗">
+<meta property="og:url" content="http://example.com/2025/02/16/App%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2%E7%9A%84%E2%80%9C%E4%BF%9D%E5%AD%98%E2%80%9D%E6%8C%89%E9%92%AE%E5%BF%85%E8%A6%81%E5%90%97/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在一个配置页面中，是否使用“保存”按钮是一个重要的交互决策，它直接影响用户体验的流畅性和操作的明确性。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250605182533.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250606102453.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250606112501.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250606160307.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250606104259.png">
+<meta property="article:published_time" content="2025-02-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-13T01:50:51.557Z">
+<meta property="article:author" content="antidote">
+<meta property="article:tag" content="工作沉淀">
+<meta property="article:tag" content="设计思考">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250605182533.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            App设置页面的“保存”按钮必要吗 -
+        
+        Love Tomato
+    </title>
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Chillax/chillax.css">
+
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/fonts.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Satoshi/satoshi.css">
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+        <link href="" rel="stylesheet">
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.8,"image_border_radius":"8px","image_alignment":"center","image_caption":false,"link_icon":false,"title_alignment":"left","image_magin":"1rem auto 1rem"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["UE designer"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":true,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":false},"single_page":true,"preloader":false,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/Najia%20Mehadji.jpeg","dark":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/jamesgilleard.jpg"},"title":"欢迎您来，欢迎您再来🤗","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8 rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"【钢琴】渔光曲","artist":"昼夜","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2%20-%20001%20-%20%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/yuguangqu.jpg"},{"name":"梁祝","artist":"吕思清","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E6%A2%81%E7%A5%9D.MP3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.10.11.png"},{"name":"Merry Christmas Mr. Lawrence","artist":"坂本龍一","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawrence%E3%80%8B%E5%9C%A3%E8%AF%9E%E5%BF%AB%E4%B9%90%EF%BC%8C%E5%8A%B3%E4%BC%A6%E6%96%AF%E5%85%88%E7%94%9F-%E3%80%8A1996%E3%80%8B%E3%80%90Hi-Res%E3%80%91%20-%20001%20-%20%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawr%E2%80%A6.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"path":"/about","icon":"fa-regular fa-address-card"},"categories":{"path":"/categories","icon":"fa-light fa-rectangle-list"},"看什么":{"icon":"fa-regular fa-eyes","submenus":{"书单":"/books","观影":"/movies"}}},"search":{"enable":false,"preload":false}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"指路牌","links":{"设计":{"icon":"fa-regular fa-hashtag","path":"https://woooooo.cn/categories/%E8%AE%BE%E8%AE%A1/"},"阅读":{"icon":"fa-regular fa-hashtag","path":"https://woooooo.cn/categories/%E9%98%85%E8%AF%BB/"},"旅行":{"icon":"fa-regular fa-hashtag","path":"https://woooooo.cn/categories/%E6%97%85%E8%A1%8C/"},"思考":{"icon":"fa-regular fa-hashtag","path":"https://woooooo.cn/categories/%E6%80%9D%E8%80%83/"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/1/17 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/regular.min.css">
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/thin.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/light.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/duotone.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/sharp-solid.min.css">
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Love Tomato
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-address-card fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-light fa-rectangle-list fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-eyes fa-fw"></i>
+                                    看什么
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/books">
+                                                    书单
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/movies">
+                                                    观影
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-address-card fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-light fa-rectangle-list fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-看什么"
+                        >
+                            <span>
+                                看什么
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-看什么">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/books">书单</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/movies">观影</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">16</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-4xl font-bold px-2 sm:px-6 md:px-8 py-3">App设置页面的“保存”按钮必要吗</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Hang</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-02-16</span>
+        <span class="mobile">2025-02-16</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1/">设计</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B2%89%E6%B7%80/">工作沉淀</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/">设计思考</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.3k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250605182533.png"
+                      alt="image.png"
+                ></p>
+<p>最近在做一个视频监控类产品的 APP 端设计，由于产品本身定位偏 B 端，里面有大量需要用户配置的页面。不同页面的配置项有多有少，如何尽量降低操作门槛，减少用户配置过程中的阻力，是我一直在思考的问题。其中有很多细节值得掰碎了一点点聊，今天就先来看看“保存”按钮——这个多数情况下，重要性数一数二的按钮——是否真的必要。</p>
+<p>在一个配置页面中，是否使用“保存”按钮是一个重要的交互决策，它直接影响用户体验的流畅性和操作的明确性。</p>
+<p>判断是否需要“保存”按钮，<strong>关键点在于：这个设置的修改是否需要用户额外的、明确的确认动作？这个设置是否是一组需要一起提交的修改？修改后是否能立即、安全地提供清晰的反馈？</strong> 具体来讲：</p>
+<h2 id="一、需要“保存”按钮的情况"><a href="#一、需要“保存”按钮的情况" class="headerlink" title="一、需要“保存”按钮的情况"></a>一、需要“保存”按钮的情况</h2><p> <strong>1、涉及敏感&#x2F;高风险操作：</strong><br><strong>用户核心信息变更：</strong> 更改密码、绑定&#x2F;解绑邮箱&#x2F;手机号、支付信息、实名认证信息等。保存按钮提供明确的确认步骤，防止误操作。<br><strong>安全、隐私相关：</strong> 如开启&#x2F;关闭双重验证、修改隐私权限范围等。保存按钮让用户有掌控感，并明确生效点。<br><strong>需要服务器验证的设置：</strong> 一些设置提交后需要与服务器交互验证（如新邮箱是否可用、密码强度是否符合要求）。“保存”操作触发验证过程，并提供明确的成功&#x2F;失败反馈。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250606102453.png"
+                      alt="image.png"
+                ></p>
+<blockquote>
+<p>第一张图是 apple ID 的密码更改页，即使是密文，系统也隐去了截图中的密码部分。苹果在保护用户隐私方面真的很用心</p>
+</blockquote>
+<p><strong>2、多选项联动修改：</strong><br>当一个设置页包含多个相互关联或需要一起生效的选项时，“保存”按钮允许用户一次性提交所有修改，避免了频繁的网络请求或部分生效导致的逻辑冲突。</p>
+<p>在本次项目设计中，我就遇到了这类情况：新增告警策略时，研发反馈由于声光告警配置是一起下发的，如果对单项进行设置，无法调用接口，即时生效。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250606112501.png"
+                      alt="image.png"
+                ></p>
+<p><strong>3、表单式设置：</strong><br>类似于网页表单的设置（如地址管理、编辑个人资料），用户习惯在完成所有信息填写后点击“保存”或“提交”按钮。此时提供保存按钮更符合用户的心智模型。</p>
+<p><strong>4、需要明确反馈点的操作：</strong><br>对于某些操作，用户期望在点击后立即得到一个明确的“操作已生效”的反馈（如保存成功的提示）。保存按钮提供了一个清晰的触发点，方便系统给出反馈。</p>
+<p><strong>5、存在复杂验证或依赖关系：</strong><br>当设置项之间有依赖关系（如 A 选项开启后，B 选项才可用），或者输入内容需要复杂验证（如格式校验）时，统一在“保存”时进行验证和提示错误信息，比实时验证可能会频繁打断用户更友好。</p>
+<p>当手动保存必要时，按钮的摆放位置也有一定的讲究。常见的3个位置：页面右上角、固定屏幕底部、紧跟内容尾部。3 种位置的优缺点如下：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250606160307.png"
+                      alt="image.png"
+                ></p>
+<p><strong>1、页面右上角</strong><br>优点：</p>
+<ul>
+<li>位置全局固定且始终可见，操作便捷，按钮不会被键盘或其它弹出控件遮挡</li>
+<li>与导航栏结合，节省屏幕空间</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>远离拇指热区（特别是大屏手机），操作不便</li>
+<li>视觉冲击力不如底部的大按钮，可能被用户忽略</li>
+</ul>
+<p><strong>2、固定屏幕底部</strong><br>优点：</p>
+<ul>
+<li>操作自然：用户完成表单填写后顺势定位，符合“从上至下”的阅读习惯</li>
+<li>拇指最易触及的区域，操作最舒适、高效且随时可用</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>会占用一定的屏幕空间，一屏能展示的信息会有轻微影响</li>
+<li>输入时，键盘控件会遮挡住按钮，操作相对不便</li>
+</ul>
+<p><strong>3、紧跟内容尾部</strong><br>优点：</p>
+<ul>
+<li>操作自然，用户完成表单填写后顺势定位，符合“从上至下”的阅读习惯</li>
+<li>滚动至底部时按钮自动浮现，不占用屏幕空间</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>需滚动触发，若表单过短，按钮位置突兀；过长则会被遮挡</li>
+<li>输入时，键盘控件会遮挡住按钮，操作相对不便</li>
+</ul>
+<p>此外，还要考虑不同平台的规范。ios倾向于使用<strong>导航栏右侧的文字按钮</strong>，对于表单，也常见<strong>底部固定按钮</strong>；Android (Material Design)则强烈推荐<strong>底部固定工具栏</strong>中的填充按钮用于主要确认操作。<br>在跨平台或追求一致体验时，<strong>底部固定工具栏往往是更安全、用户体验更好的通用方案</strong>。</p>
+<h2 id="二、不需要“保存”按钮的情况"><a href="#二、不需要“保存”按钮的情况" class="headerlink" title="二、不需要“保存”按钮的情况"></a>二、不需要“保存”按钮的情况</h2><p>1、<strong>独立开关&#x2F;选择器：</strong></p>
+<ul>
+<li><strong>开关：</strong> 用户期望开关的开启&#x2F;关闭是即时生效的。点击开关本身就是一个明确的“保存”动作。如“闹钟”、“深色模式”、“接受消息通知”等。</li>
+<li><strong>单选按钮：</strong> 选择不同的选项应即时生效。如“字体样式”、“消息通知显示方式”等。</li>
+<li><strong>简单的选择器：</strong> 用户滑动或选择后，效果应立即可见。 如选择字体大小、主题颜色等，通常还支持实时预览效果。</li>
+</ul>
+<p>2、<strong>提供即时反馈&#x2F;预览的设置：</strong><br>任何修改后用户能立即看到视觉或功能反馈的设置。例如：</p>
+<ul>
+<li>调整亮度&#x2F;音量&#x2F;字体大小滑块（即时给予视觉、听觉反馈）。</li>
+<li>更改阅读器字体&#x2F;背景色（文本区域立刻刷新）。</li>
+<li>排序方式选择（列表立刻重新排序）。</li>
+</ul>
+<p>3、<strong>临时性或筛选性设置：</strong><br>一些在特定页面内起作用的筛选或排序设置，通常不需要全局保存。例如，在商品列表页设置“价格从低到高”排序，用户离开列表页后再次进入时，应用可能恢复到默认排序或记住上次会话的排序但这属于状态记忆，不是手动保存。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250606104259.png"
+                      alt="image.png"
+                ></p>
+<h2 id="三、关键设计原则与注意事项"><a href="#三、关键设计原则与注意事项" class="headerlink" title="三、关键设计原则与注意事项"></a>三、关键设计原则与注意事项</h2><p>1、 <strong>即时反馈：</strong> 无论是否需要保存按钮，<strong>任何用户操作都必须给予即时、清晰的反馈</strong>。对于即时生效的设置需要注意以下几点：</p>
+<ul>
+<li>开关切换需要有流畅的动效和明确的状态指示</li>
+<li>滑块调整应有实时响应（如字体大小、屏幕亮度）</li>
+<li>选择器选中项应有高亮显示</li>
+<li>对于需要短暂网络请求的设置（如切换通知总开关），需要加载指示器（如按钮置灰、Loading Spinner）和最终的成功&#x2F;失败提示</li>
+</ul>
+<p>2、<strong>状态恢复&#x2F;撤销：</strong><br><strong>提供撤销选项：</strong> 如修改后几秒内提供一个“撤销”提示条（Snackbar&#x2F;Toast），对于重要的误操作是很好的补救措施。<br><strong>明确记忆状态：</strong> App 应该可靠地记住用户最后设置的状态。</p>
+<p>如果需要保存按钮，确保它的标签清晰，并根据场景配合使用“取消”或“重置”按钮。</p>
+<p>3、<strong>自动保存（防丢失机制）：</strong><br>对于某些表单式设置，可以在用户停止输入一段时间后自动保存，或检测到用户离开页面时提示保存。</p>
+<p><strong>“完成”&#x2F;“返回”按钮触发保存：</strong> 在模态对话框或从子页面返回父页面时，可以将“完成”或“返回”按钮的行为等同于“保存”——需在用户离开时明确提示未保存的更改。</p>
+<p>4、<strong>一致性：</strong> 在同一个 App 内，相似类型的设置处理方式应保持一致，避免用户认知混乱。</p>
+<p>5、 <strong>性能考量：</strong> 对于即时生效的设置，尤其是涉及网络请求的（如开关远程通知），要优化性能，确保响应迅速，避免用户因延迟而重复点击。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>需要“保存”按钮：</strong> 高风险操作、批量修改、表单填写、需要明确确认点、复杂验证依赖。<br><strong>不需要“保存”按钮：</strong> 独立开关&#x2F;选择器、提供即时反馈&#x2F;预览的设置、临时筛选。</p>
+<p>核心原则是：<strong>尽量减少用户的操作步骤，同时保证用户对重要操作的控制感和避免误操作的风险。</strong></p>
+<p>优秀的交互设计是在理解用户意图和操作风险的基础上，选择最自然、最流畅、最安全的交互方式。当用户感觉不到“保存”的存在，或者当“保存”按钮的存在提供了必要的安全感和控制感时，设计就是成功的。</p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B2%89%E6%B7%80/">#工作沉淀</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/">#设计思考</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/03/10/B端表格设计指南/" title="B端交互设计经验手册：表格篇" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="B端交互设计经验手册：表格篇" class="!max-w-none">
+  <span class="title">B端交互设计经验手册：表格篇</span>
+</a><a class="recommended-article-item" href="/2024/06/20/TV体验设计经验手册/" title="TV大屏体验设计经验手册" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/bastian-riccardi-JKfDuqD90pI-unsplash.jpg" alt="TV大屏体验设计经验手册" class="!max-w-none">
+  <span class="title">TV大屏体验设计经验手册</span>
+</a><a class="recommended-article-item" href="/2023/05/27/实例拆解：可用性测试经验总结/" title="实例拆解：可用性测试经验总结" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/202408301636382.png" alt="实例拆解：可用性测试经验总结" class="!max-w-none">
+  <span class="title">实例拆解：可用性测试经验总结</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/03/10/B端表格设计指南/" title="B端交互设计经验手册：表格篇" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="B端交互设计经验手册：表格篇" class="!max-w-none">
+  <span class="title">B端交互设计经验手册：表格篇</span>
+</a><a class="recommended-article-item" href="/2024/06/20/TV体验设计经验手册/" title="TV大屏体验设计经验手册" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/bastian-riccardi-JKfDuqD90pI-unsplash.jpg" alt="TV大屏体验设计经验手册" class="!max-w-none">
+  <span class="title">TV大屏体验设计经验手册</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2025/06/19/%E9%AA%8C%E5%85%89%E4%BB%AA%E4%B8%AD%E7%9A%84%E7%83%AD%E6%B0%94%E7%90%83%E6%98%AF%E5%90%A6%E7%9C%9F%E5%AE%9E%E5%AD%98%E5%9C%A8%EF%BC%9F/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">验光仪中的热气球图像是否真实存在？</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/10/21/%E6%8E%A8%E7%90%86%E6%96%87%E5%AD%A6%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">推理文学入坑指南</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">App设置页面的“保存”按钮必要吗</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%9C%80%E8%A6%81%E2%80%9C%E4%BF%9D%E5%AD%98%E2%80%9D%E6%8C%89%E9%92%AE%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">一、需要“保存”按钮的情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%8D%E9%9C%80%E8%A6%81%E2%80%9C%E4%BF%9D%E5%AD%98%E2%80%9D%E6%8C%89%E9%92%AE%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">二、不需要“保存”按钮的情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">三、关键设计原则与注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+    </ul>
+
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+       
+
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Swup.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/imageViewer.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/utils.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/main.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/categoryList.js"></script>
+
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/lazyload.js"></script>
+
+
+
+
+
+  <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/typed.js"></script>
+
+
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/masonry.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/anime.min.js"></script>'
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/tocToggle.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/toc.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/APlayer.min.js"></script>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>

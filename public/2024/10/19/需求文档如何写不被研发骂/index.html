@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Hang">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/10/19/需求文档如何写不被研发骂/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="被研发大佬们教育出来的一点点经验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="需求文档如何写不被研发骂">
+<meta property="og:url" content="http://example.com/2024/10/19/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%8D%E8%A2%AB%E7%A0%94%E5%8F%91%E9%AA%82/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="被研发大佬们教育出来的一点点经验">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-06T03:54:16.578Z">
+<meta property="article:author" content="antidote">
+<meta property="article:tag" content="需求分析">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            需求文档如何写不被研发骂 -
+        
+        Love Tomato
+    </title>
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Chillax/chillax.css">
+
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/fonts.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Satoshi/satoshi.css">
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+        <link href="" rel="stylesheet">
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.8,"image_border_radius":"8px","image_alignment":"center","image_caption":false,"link_icon":false,"title_alignment":"left","image_magin":"1rem auto 1rem"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["UE designer"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":true,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":false},"single_page":true,"preloader":false,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/Najia%20Mehadji.jpeg","dark":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/jamesgilleard.jpg"},"title":"欢迎您来，欢迎您再来🤗","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8 rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"【钢琴】渔光曲","artist":"昼夜","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2%20-%20001%20-%20%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/yuguangqu.jpg"},{"name":"梁祝","artist":"吕思清","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E6%A2%81%E7%A5%9D.MP3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.10.11.png"},{"name":"Merry Christmas Mr. Lawrence","artist":"坂本龍一","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawrence%E3%80%8B%E5%9C%A3%E8%AF%9E%E5%BF%AB%E4%B9%90%EF%BC%8C%E5%8A%B3%E4%BC%A6%E6%96%AF%E5%85%88%E7%94%9F-%E3%80%8A1996%E3%80%8B%E3%80%90Hi-Res%E3%80%91%20-%20001%20-%20%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawr%E2%80%A6.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"path":"/about","icon":"fa-regular fa-address-card"},"categories":{"path":"/categories","icon":"fa-light fa-rectangle-list"},"看什么":{"icon":"fa-regular fa-eyes","submenus":{"书单":"/books","观影":"/movies"}}},"search":{"enable":false,"preload":false}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"指路牌","links":{"设计":{"icon":"fa-regular fa-hashtag","path":"https://woooooo.cn/categories/%E8%AE%BE%E8%AE%A1/"},"阅读":{"icon":"fa-regular fa-hashtag","path":"https://woooooo.cn/categories/%E9%98%85%E8%AF%BB/"},"旅行":{"icon":"fa-regular fa-hashtag","path":"https://woooooo.cn/categories/%E6%97%85%E8%A1%8C/"},"思考":{"icon":"fa-regular fa-hashtag","path":"https://woooooo.cn/categories/%E6%80%9D%E8%80%83/"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/1/17 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/regular.min.css">
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/thin.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/light.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/duotone.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/sharp-solid.min.css">
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Love Tomato
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-address-card fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-light fa-rectangle-list fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-eyes fa-fw"></i>
+                                    看什么
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/books">
+                                                    书单
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/movies">
+                                                    观影
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-address-card fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-light fa-rectangle-list fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-看什么"
+                        >
+                            <span>
+                                看什么
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-看什么">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/books">书单</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/movies">观影</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">16</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-4xl font-bold px-2 sm:px-6 md:px-8 py-3">需求文档如何写不被研发骂</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Hang</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-10-19</span>
+        <span class="mobile">2024-10-19</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1/">设计</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/">需求分析</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.3k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>在产品管理的复杂生态系统中，需求文档的撰写与沟通犹如桥梁，连接着产品团队的各个环节，是确保产品成功交付的关键因素。一份清晰、准确且有效的需求文档不仅能够为开发团队提供明确的方向，还能促进跨部门协作，减少误解和返工，最终提升产品的质量和市场竞争力。</p>
+<h2 id="一、需求文档撰写的重要性"><a href="#一、需求文档撰写的重要性" class="headerlink" title="一、需求文档撰写的重要性"></a><strong>一、需求文档撰写的重要性</strong></h2><h3 id="1、明确产品方向"><a href="#1、明确产品方向" class="headerlink" title="1、明确产品方向"></a>1、明确产品方向</h3><p>需求文档是产品规划的蓝图，详细阐述了产品的目标、功能、特性以及用户场景等信息。它为整个产品团队设定了清晰的方向，确保所有成员对产品的愿景有共同的理解，避免在开发过程中出现偏离目标的情况。</p>
+<h3 id="2、促进团队协作"><a href="#2、促进团队协作" class="headerlink" title="2、促进团队协作"></a>2、促进团队协作</h3><p>开发团队依据需求文档进行技术实现，测试团队根据其编写测试用例，设计团队参考文档进行界面设计，市场团队则从中获取产品卖点用于推广。一份优秀的需求文档能够促进各部门之间的协同工作，提高团队效率。</p>
+<h3 id="3、降低风险与成本"><a href="#3、降低风险与成本" class="headerlink" title="3、降低风险与成本"></a>3、降低风险与成本</h3><p>准确的需求文档有助于减少因需求不明确或变更频繁导致的开发错误、返工和延误，从而降低项目成本，提高产品按时交付的可能性，同时也降低了产品上线后出现问题的风险。</p>
+<h2 id="二、需求文档的结构与内容"><a href="#二、需求文档的结构与内容" class="headerlink" title="二、需求文档的结构与内容"></a>二、需求文档的结构与内容</h2><h3 id="1、文档引言"><a href="#1、文档引言" class="headerlink" title="1、文档引言"></a>1、文档引言</h3><p>主要包含版本封面、版本日志、更新记录、目录、适用范围与读者对象等</p>
+<ul>
+<li><p>版本封面</p>
+<p>  版本封面在需求文档的第一页，用于展示“项目名称、版本编号、版本开发时间、版本发布时间、版本相关负责人”等相关内容。本质上是对“文档”的包装，使其完整、规范、专业。</p>
+</li>
+<li><p>更新日志</p>
+<p>  描述当前版本的关联需求有哪些（新版本下新增哪些功能、调整哪些需求），让前后端明确开发范围。同时也是一种过程留痕手段，在项目复盘、总结时，能快速回溯各版本的迭代内容、辅助过程分析。</p>
+</li>
+<li><p>适用范围与读者对象</p>
+<p>  界定文档的适用范围，说明涵盖的产品功能模块或业务流程，同时明确文档的主要读者对象，如开发人员、测试人员、设计师等，以便在撰写过程中针对不同读者的需求提供合适的信息。</p>
+</li>
+</ul>
+<h3 id="2、产品概述"><a href="#2、产品概述" class="headerlink" title="2、产品概述"></a>2、产品概述</h3><h4 id="产品背景与目标"><a href="#产品背景与目标" class="headerlink" title="产品背景与目标"></a>产品背景与目标</h4><p>介绍产品诞生的背景，包括市场需求、业务问题或机会等，明确产品的总体目标和期望达成的业务成果，使读者了解产品存在的意义和价值。</p>
+<h4 id="产品定位与核心价值"><a href="#产品定位与核心价值" class="headerlink" title="产品定位与核心价值"></a>产品定位与核心价值</h4><p>清晰阐述产品在市场中的定位，与竞争对手相比的差异化特点，以及为用户提供的核心价值主张，帮助读者从宏观上把握产品的本质。</p>
+<h4 id="产品架构与模块划分"><a href="#产品架构与模块划分" class="headerlink" title="产品架构与模块划分"></a>产品架构与模块划分</h4><p>描述产品的整体架构，包括各个功能模块之间的关系和交互方式，以及数据在系统中的流动路径，为开发人员构建系统架构提供指导。</p>
+<h3 id="3、功能需求"><a href="#3、功能需求" class="headerlink" title="3、功能需求"></a>3、功能需求</h3><h4 id="功能列表与详细描述"><a href="#功能列表与详细描述" class="headerlink" title="功能列表与详细描述"></a>功能列表与详细描述</h4><p>以清晰的列表形式呈现产品的各项功能，对每个功能进行详细的文字描述，包括功能的操作流程、输入输出、业务规则等，确保开发人员能够准确理解功能的实现要求。</p>
+<h4 id="用例与用户场景"><a href="#用例与用户场景" class="headerlink" title="用例与用户场景"></a>用例与用户场景</h4><p>通过编写用例和描述用户场景，将功能置于实际使用情境中，帮助团队成员更好地理解用户如何与产品进行交互，以及功能在不同场景下的表现和作用，增强对用户需求的感知。</p>
+<h3 id="4、非功能需求"><a href="#4、非功能需求" class="headerlink" title="4、非功能需求"></a>4、非功能需求</h3><h3 id="性能要求"><a href="#性能要求" class="headerlink" title="性能要求"></a>性能要求</h3><p>明确产品在性能方面的期望指标，如响应时间、吞吐量、并发用户数等，以便开发团队在设计和优化系统时考虑性能因素，确保产品在实际运行中能够满足用户的性能期望。</p>
+<h4 id="安全性需求"><a href="#安全性需求" class="headerlink" title="安全性需求"></a>安全性需求</h4><p>阐述产品涉及的安全需求，包括用户数据保护、系统权限管理、数据加密等方面的要求，保障产品在使用过程中的安全性和可靠性，保护用户隐私和企业利益。</p>
+<h4 id="兼容性需求"><a href="#兼容性需求" class="headerlink" title="兼容性需求"></a>兼容性需求</h4><p>说明产品需要兼容的操作系统、浏览器、设备类型等，确保产品能够在多种环境下正常运行，扩大产品的适用范围，提高用户满意度。</p>
+<h3 id="5、数据需求"><a href="#5、数据需求" class="headerlink" title="5、数据需求"></a>5、数据需求</h3><h4 id="数据实体与关系"><a href="#数据实体与关系" class="headerlink" title="数据实体与关系"></a>数据实体与关系</h4><p>定义产品涉及的数据实体，描述它们之间的逻辑关系，如数据库表结构、字段定义、主键外键关系等，数据库设计提供依据。</p>
+<h4 id="数据来源与流转"><a href="#数据来源与流转" class="headerlink" title="数据来源与流转"></a>数据来源与流转</h4><p>说明数据的来源渠道，以及在产品各个功能模块之间的流转过程，确保数据的完整性、准确性和一致性，同时也便于数据管理和维护。</p>
+<h3 id="6、原型界面"><a href="#6、原型界面" class="headerlink" title="6、原型界面"></a>6、原型界面</h3><p>提供产品界面的整体布局框架和关键页面的原型设计。原型分为低保真原型和高保真原型。通常会采用低保真原型<strong>表现产品中最重要的用户流程和功能所涉及的页面关系</strong>。用高保真表现产品视觉效果、交互动效、体验效果（通常是需要面向领导或客户演示产品或者跟开发说明交互动效时）</p>
+<p>在大厂或一些重视用户体验的公司里，这部分工作往往会由专业的UE设计师负责。如果公司没有设置相关岗位，需要产品经理兼任，提供基础的原型界面。</p>
+<h2 id="三、需求文档撰写的原则与技巧"><a href="#三、需求文档撰写的原则与技巧" class="headerlink" title="三、需求文档撰写的原则与技巧"></a>三、需求文档撰写的原则与技巧</h2><h3 id="1、清晰简洁"><a href="#1、清晰简洁" class="headerlink" title="1、清晰简洁"></a>1、清晰简洁</h3><h4 id="使用通俗易懂的语言"><a href="#使用通俗易懂的语言" class="headerlink" title="使用通俗易懂的语言"></a>使用通俗易懂的语言</h4><p>避免使用过于专业或晦涩难懂的术语，确保文档能够被不同背景的团队成员理解。对于必须使用的专业词汇，应进行适当的解释。</p>
+<h4 id="保持文档结构清晰"><a href="#保持文档结构清晰" class="headerlink" title="保持文档结构清晰"></a>保持文档结构清晰</h4><p>合理划分文档章节，使用标题、编号、列表等方式组织内容，使文档层次分明，易于阅读和导航。每个章节和段落应围绕一个主题展开，逻辑连贯。</p>
+<h3 id="2、准确完整"><a href="#2、准确完整" class="headerlink" title="2、准确完整"></a>2、准确完整</h3><h4 id="精确描述需求细节"><a href="#精确描述需求细节" class="headerlink" title="精确描述需求细节"></a>精确描述需求细节</h4><p>对功能需求、业务规则、数据要求等进行详细、准确的描述，避免模糊不清或存在歧义的表述。任何可能引起误解的地方都应加以澄清，确保开发团队能够按照文档准确实现功能。</p>
+<h4 id="涵盖所有必要信息"><a href="#涵盖所有必要信息" class="headerlink" title="涵盖所有必要信息"></a>涵盖所有必要信息</h4><p>确保文档包含产品开发所需的全部信息，不遗漏重要内容。不仅要关注功能本身，还要考虑到与功能相关的各种因素，如性能、安全、兼容性等方面的要求，以及用户场景、数据流转等背景信息。</p>
+<h3 id="3、可验证性"><a href="#3、可验证性" class="headerlink" title="3、可验证性"></a>3、可验证性</h3><h4 id="定义明确的验收标准"><a href="#定义明确的验收标准" class="headerlink" title="定义明确的验收标准"></a>定义明确的验收标准</h4><p>为每个需求定义可量化、可验证的验收标准，以便测试团队能够准确判断功能是否符合要求。验收标准应具体、明确，例如规定某个功能的响应时间不得超过多少秒，某个计算结果的精度应达到何种程度等。</p>
+<h4 id="便于测试用例编写"><a href="#便于测试用例编写" class="headerlink" title="便于测试用例编写"></a>便于测试用例编写</h4><p>需求文档的内容应便于测试人员编写测试用例，能够直接根据文档中的信息确定测试场景、输入数据和预期输出结果，确保测试的全面性和有效性。</p>
+<h3 id="4、一致性"><a href="#4、一致性" class="headerlink" title="4、一致性"></a>4、一致性</h3><h4 id="文档内部术语和格式统一"><a href="#文档内部术语和格式统一" class="headerlink" title="文档内部术语和格式统一"></a>文档内部术语和格式统一</h4><p>在整个需求文档中，使用统一的术语和定义，避免对同一概念使用不同的表述方式。同时，保持文档格式的一致性，如字体、字号、编号方式等，使文档看起来规范、专业。</p>
+<h4 id="与其他相关文档保持一致"><a href="#与其他相关文档保持一致" class="headerlink" title="与其他相关文档保持一致"></a>与其他相关文档保持一致</h4><p>需求文档应与项目中的其他相关文档，如项目计划、设计文档、测试计划等保持一致，确保各个文档之间的信息相互呼应，不存在矛盾或冲突之处。</p>
+<h3 id="5、可维护性"><a href="#5、可维护性" class="headerlink" title="5、可维护性"></a>5、可维护性</h3><h4 id="易于更新与修改"><a href="#易于更新与修改" class="headerlink" title="易于更新与修改"></a>易于更新与修改</h4><p>采用结构化的文档编写方式，便于后期对文档进行更新和修改。当需求发生变更时，能够快速定位到相关内容，并准确地进行修改，同时保持文档的完整性和一致性。</p>
+<h4 id="记录变更历史"><a href="#记录变更历史" class="headerlink" title="记录变更历史"></a>记录变更历史</h4><p>建立文档变更历史记录机制，详细记录每次变更的内容、原因、时间以及变更人等信息，方便团队成员追溯需求的演变过程，了解需求变更的背景和影响。</p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/">#需求分析</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/05/27/实例拆解：可用性测试经验总结/" title="实例拆解：可用性测试经验总结" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/202408301636382.png" alt="实例拆解：可用性测试经验总结" class="!max-w-none">
+  <span class="title">实例拆解：可用性测试经验总结</span>
+</a><a class="recommended-article-item" href="/2023/03/10/B端表格设计指南/" title="B端交互设计经验手册：表格篇" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="B端交互设计经验手册：表格篇" class="!max-w-none">
+  <span class="title">B端交互设计经验手册：表格篇</span>
+</a><a class="recommended-article-item" href="/2023/07/12/常看常新的技术常识/" title="常看常新的技术常识" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="常看常新的技术常识" class="!max-w-none">
+  <span class="title">常看常新的技术常识</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/05/27/实例拆解：可用性测试经验总结/" title="实例拆解：可用性测试经验总结" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/202408301636382.png" alt="实例拆解：可用性测试经验总结" class="!max-w-none">
+  <span class="title">实例拆解：可用性测试经验总结</span>
+</a><a class="recommended-article-item" href="/2023/03/10/B端表格设计指南/" title="B端交互设计经验手册：表格篇" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg" alt="B端交互设计经验手册：表格篇" class="!max-w-none">
+  <span class="title">B端交互设计经验手册：表格篇</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/10/21/%E6%8E%A8%E7%90%86%E6%96%87%E5%AD%A6%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">推理文学入坑指南</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/06/20/TV%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C%E6%89%8B%E5%86%8C/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">TV大屏体验设计经验手册</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">需求文档如何写不被研发骂</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E6%92%B0%E5%86%99%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-text">一、需求文档撰写的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%98%8E%E7%A1%AE%E4%BA%A7%E5%93%81%E6%96%B9%E5%90%91"><span class="nav-text">1、明确产品方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E4%BF%83%E8%BF%9B%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C"><span class="nav-text">2、促进团队协作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E9%99%8D%E4%BD%8E%E9%A3%8E%E9%99%A9%E4%B8%8E%E6%88%90%E6%9C%AC"><span class="nav-text">3、降低风险与成本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E7%9A%84%E7%BB%93%E6%9E%84%E4%B8%8E%E5%86%85%E5%AE%B9"><span class="nav-text">二、需求文档的结构与内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%96%87%E6%A1%A3%E5%BC%95%E8%A8%80"><span class="nav-text">1、文档引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E4%BA%A7%E5%93%81%E6%A6%82%E8%BF%B0"><span class="nav-text">2、产品概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82"><span class="nav-text">3、功能需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E9%9D%9E%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82"><span class="nav-text">4、非功能需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%A6%81%E6%B1%82"><span class="nav-text">性能要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E6%95%B0%E6%8D%AE%E9%9C%80%E6%B1%82"><span class="nav-text">5、数据需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E5%8E%9F%E5%9E%8B%E7%95%8C%E9%9D%A2"><span class="nav-text">6、原型界面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E6%92%B0%E5%86%99%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%8A%80%E5%B7%A7"><span class="nav-text">三、需求文档撰写的原则与技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%B8%85%E6%99%B0%E7%AE%80%E6%B4%81"><span class="nav-text">1、清晰简洁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%87%86%E7%A1%AE%E5%AE%8C%E6%95%B4"><span class="nav-text">2、准确完整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E5%8F%AF%E9%AA%8C%E8%AF%81%E6%80%A7"><span class="nav-text">3、可验证性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E4%B8%80%E8%87%B4%E6%80%A7"><span class="nav-text">4、一致性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E5%8F%AF%E7%BB%B4%E6%8A%A4%E6%80%A7"><span class="nav-text">5、可维护性</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+    </ul>
+
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+       
+
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Swup.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/imageViewer.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/utils.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/main.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/categoryList.js"></script>
+
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/lazyload.js"></script>
+
+
+
+
+
+  <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/typed.js"></script>
+
+
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/masonry.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/anime.min.js"></script>'
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/tocToggle.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/toc.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/APlayer.min.js"></script>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>

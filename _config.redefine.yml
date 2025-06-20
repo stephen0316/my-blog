@@ -62,7 +62,7 @@ home_banner:
   image: 
     light: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/Japan%20by%20Car%202.png
     dark: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/jamesgilleard.jpg
-  title: 欢迎光↗️临↘️
+  title: 欢迎
   subtitle:
     text: [] 
     typing_speed: 100 # Typing speed (ms)
