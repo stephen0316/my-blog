@@ -1044,7 +1044,7 @@ button {
   font-size: 2.4rem;
   font-weight: 700;
   border-bottom: solid 0px var(--fourth-text-color);
-  margin-top: 4rem;
+  margin-top: 3.6rem;
 }
 @media (max-width: 768px) {
   .markdown-body h1,
@@ -1058,7 +1058,7 @@ button {
   font-weight: 700;
   padding: 3px 0;
   border-bottom: solid 0px var(--fourth-text-color);
-  margin-top: 4rem;
+  margin-top: 2.4rem;
 }
 @media (max-width: 768px) {
   .markdown-body h2,
@@ -1070,7 +1070,7 @@ button {
 .markdown-body .h3 {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-top: 2.8rem;
+  margin-top: 2.4rem;
 }
 @media (max-width: 768px) {
   .markdown-body h3,
@@ -1082,7 +1082,7 @@ button {
 .markdown-body .h4 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 @media (max-width: 768px) {
   .markdown-body h4,
@@ -1094,7 +1094,7 @@ button {
 .markdown-body .h5 {
   font-size: 1.28rem;
   font-weight: 600;
-  margin-top: 2.2rem;
+  margin-top: 2rem;
 }
 @media (max-width: 768px) {
   .markdown-body h5,
