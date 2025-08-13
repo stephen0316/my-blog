@@ -1,7 +1,7 @@
 {
   "alwaysUpdateLinks": true,
   "promptDelete": false,
-  "showInlineTitle": true,
+  "showInlineTitle": false,
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "Letter",
