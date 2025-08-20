@@ -7,7 +7,7 @@ tags:
   - 设计思考
   - APP
 toc: false
-date: 2025-02-16
+date: 2025-02-12
 excerpt: 在一个配置页面中，是否使用“保存”按钮是一个重要的交互决策，它直接影响用户体验的流畅性和操作的明确性。
 ---
 ![image.png](https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250605182533.png)
