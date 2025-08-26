@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Hang">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/08/24/一种减少驾驶员分心的新型用户体验设计概念/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="Casper Kessels从基础交互和复杂交互两方面展开研究，旨在设计一种降低驾驶员注意力分散的概念方案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一种减少驾驶员分心的新型用户体验设计概念">
+<meta property="og:url" content="http://example.com/2024/08/24/%E4%B8%80%E7%A7%8D%E5%87%8F%E5%B0%91%E9%A9%BE%E9%A9%B6%E5%91%98%E5%88%86%E5%BF%83%E7%9A%84%E6%96%B0%E5%9E%8B%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E6%A6%82%E5%BF%B5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Casper Kessels从基础交互和复杂交互两方面展开研究，旨在设计一种降低驾驶员注意力分散的概念方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/banner.webp">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/cluster.webp">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/leftrighttouchpad.webp">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/LongAppSwitch-3444b635cb354bc1e8e6910728b02c73.gif">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/QuickAppSwitch-cee54d0375ae27fc4a76bf906458356b.gif">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/customgesture.webp">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/CustomGestureMusic-b59a08d84aa82e1602e31cf265222583.gif">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/NaviSetup-efef1b49c90bfa9d7a11847f528414b5.gif">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/ipadUI.webp">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/RenaultInterior.webp">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/phoneUI.webp">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250820173027.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250820173101.png">
+<meta property="og:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250820173132.png">
+<meta property="article:published_time" content="2024-08-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-20T10:33:10.080Z">
+<meta property="article:author" content="antidote">
+<meta property="article:tag" content="体验设计">
+<meta property="article:tag" content="译文">
+<meta property="article:tag" content="HMI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/banner.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            一种减少驾驶员分心的新型用户体验设计概念 -
+        
+        Love Tomato
+    </title>
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Chillax/chillax.css">
+
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/fonts.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fonts/Satoshi/satoshi.css">
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+        <link href="" rel="stylesheet">
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.8,"image_border_radius":"8px","image_alignment":"center","image_caption":false,"link_icon":false,"title_alignment":"left","image_magin":"1rem auto 1rem"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["UE designer"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/_.jpg","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":true,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":false},"single_page":true,"preloader":false,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/%E5%B9%BB%E7%81%AF%E7%89%87%2016_9%20-%207@4x.png","dark":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/jamesgilleard.jpg"},"subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}},"title":"👀"},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"【钢琴】渔光曲","artist":"昼夜","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2%20-%20001%20-%20%E3%80%90%E6%98%BC%E5%A4%9C%E3%80%91%E6%B8%94%E5%85%89%E6%9B%B2.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/yuguangqu.jpg"},{"name":"梁祝","artist":"吕思清","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E6%A2%81%E7%A5%9D.MP3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.10.11.png"},{"name":"Merry Christmas Mr. Lawrence","artist":"坂本龍一","url":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/music/%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawrence%E3%80%8B%E5%9C%A3%E8%AF%9E%E5%BF%AB%E4%B9%90%EF%BC%8C%E5%8A%B3%E4%BC%A6%E6%96%AF%E5%85%88%E7%94%9F-%E3%80%8A1996%E3%80%8B%E3%80%90Hi-Res%E3%80%91%20-%20001%20-%20%E3%80%90%E7%BA%AA%E5%BF%B5%EF%BD%9C%E5%9D%82%E6%9C%AC%E9%BE%99%E4%B8%80%E3%80%91%E7%99%BE%E4%B8%87%E7%BA%A7%E5%BD%95%E9%9F%B3%E6%A3%9A%E5%90%AC%E3%80%8AMerry%20Christmas%20Mr.%20Lawr%E2%80%A6.mp3","cover":"https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/iShot_2023-12-20_16.16.37.png"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"path":"/about","icon":"fa-regular fa-address-card"},"categories":{"path":"/categories","icon":"fa-light fa-rectangle-list"},"看什么":{"icon":"fa-regular fa-eyes","submenus":{"书单":"/books","观影":"/movies"}}},"search":{"enable":false,"preload":false}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"指路牌","links":{"设计":{"icon":"fa-regular fa-hashtag","path":"/categories/设计"},"阅读":{"icon":"fa-regular fa-hashtag","path":"/categories/阅读/"},"旅行":{"icon":"fa-regular fa-hashtag","path":"/categories/旅行"},"思考":{"icon":"fa-regular fa-hashtag","path":"/categories/思考/"},"折腾":{"icon":"fa-regular fa-hashtag","path":"/categories/🦐折腾/"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/1/17 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/regular.min.css">
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/thin.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/light.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/duotone.min.css">
+    
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/fontawesome/sharp-solid.min.css">
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Love Tomato
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-address-card fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-light fa-rectangle-list fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-eyes fa-fw"></i>
+                                    看什么
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/books">
+                                                    书单
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/movies">
+                                                    观影
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-address-card fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-light fa-rectangle-list fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-看什么"
+                        >
+                            <span>
+                                看什么
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-看什么">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/books">书单</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/movies">观影</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">20</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                
+                
+                <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/banner.webp" alt="一种减少驾驶员分心的新型用户体验设计概念" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
+                
+                <div class="w-full flex items-center absolute bottom-0 justify-start">
+                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-4xl font-bold backdrop-blur-lg rounded-xl border border-border-color ">一种减少驾驶员分心的新型用户体验设计概念</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/IMG_7334.jpeg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Hang</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-08-24</span>
+        <span class="mobile">2024-08-24</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1/">设计</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1/">体验设计</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E8%AF%91%E6%96%87/">译文</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/HMI/">HMI</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>4.2k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>14 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>本文为笔者亲译，原文链接：<a class="link"   target="_blank" rel="noopener" href="https://www.theturnsignalblog.com/designing-a-new-ux-concept-to-reduce-driver-distraction/" >theturnsignalblog.com&#x2F;designing-a-new-ux-concept-to-reduce-driver-distraction&#x2F;</a>，感谢作者：Casper Kessels</p>
+<p>触控屏在车内空间中越来越普及，但其通常被设计得很复杂以至于难以在驾驶过程中被操控。因此，我在思考能否创造一种现代化的交互模式，既保留触控屏强大灵活的特性又不会引起驾驶员分心。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/banner.webp"
+                      alt="banner.webp"
+                ></p>
+<p>自从初代 iPhone 发布以来，汽车设计师们就一直在尝试将它的极简外观和界面风格融入汽车内饰之中。随着每一代新车发布，越来越多的实体按键和旋钮被巨大的触控屏代替。然而，IOS 的设计语言聚焦于智能手机的使用场景，而汽车的触控屏设计似乎只是一味的复制，并没有适配驾驶场景。这使得触控屏太复杂，并不适合在驾驶过程中使用。这也是为什么因分心驾驶导致的交通事故每年都在增加。因此，我在思考能否创造一种现代化的交互模式，既保留触控屏强大灵活的特性又不会引起驾驶员分心。</p>
+<h1 id="交互研究"><a href="#交互研究" class="headerlink" title="交互研究"></a>交互研究</h1><p>在思考如何减少驾驶员分心时，我认为我们常常站在错误的角度。当汽车界面充斥着大量复杂功能时，解决方案应该限制功能数量而不只是简化界面。这引出了以下问题：车载系统应该无条件满足驾驶员的任何需求，还是应该出于安全考虑限制用户在车内的行为？于我而言，显然应该选择后者。尽管实施起来并没有直接将多余功能从车内移除那样简单。汽车行业竞争如此激烈，消费者始终可以选择那些功能酷炫的新车。因此我们如何才能在砍掉大部分功能的同时，依然为消费者提供满意的产品？</p>
+<p>通过观察驾驶员与这些设备的交互方式，我们将其分为两类：基础交互和复杂交互。</p>
+<ul>
+<li>基础交互：包括调节温度、音量、查看油量等。这类操作认知负荷低，使用频率高，必须随时可用，且在驾驶过程中不可获取。</li>
+<li>复杂交互：包括更改车辆设置、规划路线、寻找加油站等。这类操作认知负荷高，需要花费长时间完成，无论界面设计得多好，都会分散驾驶员注意力。</li>
+</ul>
+<p>我希望提出一个概念方案，让基础交互更容易在驾驶过程中完成，同时适配复杂交互。作为额外的约束，这个方案必须在两年内就能落地——以迫使自己避免过度依赖难以预测的远期技术而偷懒。</p>
+<h2 id="基础交互"><a href="#基础交互" class="headerlink" title="基础交互"></a>基础交互</h2><p>前文中我们将交互分成了两类。现在我们先讲一讲基础交互的信息布局和操作方法。<br>研究表明，视觉信息应尽可能靠近驾驶员视线范围，以减少驾驶员的视线偏移。考虑到这些相对复杂，我会将它们放到仪表盘里。另外，我也设想过使用抬头屏，但由于信息复杂度较高，这种方案反而会产生相反的效果。</p>
+<p>其次，最重要的是如何操控这些信息？基础交互会被频繁用到，必须尽可能减少对驾驶员的干扰。近年来，汽车人机交互领域的相关研究持续增长。大量研究表明，新型交互方式既能实现更直接的操作，又能降低注意力分散程度，发展前景光明。我找到一些在方向盘中引入手势交互的例子。这种方案具有两个明显的优势：既能实现更复杂的交互功能，又能确保双手不离开方向盘。<br>此外，基础交互也适用帕累托原则，即 20% 的基础交互会占用 80%的操作时间。通过手势交互，驾驶员能逐步培养肌肉记忆，完成与控制屏的交互，从而减少分心。</p>
+<p>经过一番潜心研究，我提出一种方案：在方向盘靠近手指的位置嵌入两块触控板。驾驶员可以通过滑动、捏放、点击等手势操控仪表盘。界面设计方面，我使用了基础的菜单布局。我也设想过颠覆性的界面设计方案，但这已超出本项目研究范围，而且会将重心从探索新型交互模式转移到界面设计上。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/cluster.webp"
+                      alt="cluster.webp"
+                ></p>
+<p>用户可以通过上下左右四个方向滑动来浏览菜单。每个方向关联着一项设置或功能。左触控板控制着系统的主要应用，用于媒体、导航、设置、通话等功能间的切换。右触控板则控制着各应用的子菜单。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/leftrighttouchpad.webp"
+                      alt="leftrighttouchpad.webp"
+                ><br>为了减少对驾驶员的干扰，触控板不会显示任何信息，这也是手势交互的主要问题所在——不容易被用户发现。界面隐藏后，用户如何才能发现系统的使用方法？为了解决这个问题，在系统检测到用户迟疑时，会显示数字化菜单来引导用户操作。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/LongAppSwitch-3444b635cb354bc1e8e6910728b02c73.gif"
+                      alt="LongAppSwitch-3444b635cb354bc1e8e6910728b02c73.gif"
+                ></p>
+<p>一些高频使用的交互在一段时间使用后会转化成肌肉记忆。此时，驾驶员无需界面引导便能操作系统。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/QuickAppSwitch-cee54d0375ae27fc4a76bf906458356b.gif"
+                      alt="CustomGestureMusic-b59a08d84aa82e1602e31cf265222583.gif"
+                ></p>
+<p>除了四向滑动之外，系统支持自定义手势。自定义手势的最大优势在于，用户能为特定的高频使用的交互创建个性化的手势。例如，当用户每次下班回家发送消息时，通过自定义手势，一个操作就可以完成原本需要 5 步以上的操作。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/customgesture.webp"
+                      alt="customgesture.webp"
+                ></p>
+<p>如果用户启动自定义手势后不知道如何完成，系统处理原则同前文所述，一旦监测到用户正在迟疑，将通过仪表盘动态展示图例，引导用户继续操作。系统将显示用户在当前停滞点可执行哪些后续操作。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/CustomGestureMusic-b59a08d84aa82e1602e31cf265222583.gif"
+                      alt="CustomGestureMusic-b59a08d84aa82e1602e31cf265222583.gif"
+                ></p>
+<p>遵循简洁性原则，系统默认只保支持少数手势交互。当前设计方案中，必要的手势仅有四向菜单导航，以及“勾选”、“X”这类用于确认、取消的基础自定义手势。但用户可以通过设置专属手势，精准定义其控制对象，使系统更适配自己的需求。专家型用户可根据自身需求设置任意数量的手势。<br>手势交互强大且应用场景广泛。我深入探索了其潜力边界，例如在导航设置方面：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/NaviSetup-efef1b49c90bfa9d7a11847f528414b5.gif"
+                      alt="CustomGestureMusic-b59a08d84aa82e1602e31cf265222583.gif"
+                ></p>
+<p>但是我发现使用手势进行一些大型交互时，会对驾驶员造成严重的干扰。解决这个问题的重点是需要尽可能简化操作。因此，除了手势交互，驾驶员也能通过语音下发命令。在系统执行一些复杂的交互，如导航去目的地时，语音交互尤其好用。理想情况下，手势和语音交互能够交替使用。例如，驾驶员可以通过手势打开导航应用，再通过语音输入目的地信息。<br><a class="link"   target="_blank" rel="noopener" href="https://youtu.be/IyKkf29e39Q" >Gesture Interaction Concept - YouTube</a></p>
+<h2 id="复杂交互"><a href="#复杂交互" class="headerlink" title="复杂交互"></a>复杂交互</h2><p>介绍完基础交互后，我们将目光转向复杂交互场景。作为驾驶过程中的非关键动作，这类交互只会偶尔被用到，通常被集成在仪表盘中，主要通过大型触控屏调用。除了少数例外，这些车载屏幕大多比不上我们熟悉的设计精良、响应快速的平板设备。这些触控屏响应速度慢、屏幕素质差，且人们通常只习惯一到两套操作系统——手机、电脑。而如今，人们进入车内，却要面对一个完全陌生的操作系统。</p>
+<p>当人们坐上驾驶位，通常考虑的是从 A 点到 B 点的行程，而不会想着学习如何使用车载系统。因此，无论界面设计如何简化，用户都始终难以掌握。这也解释了为什么 Apple CarPlay 和 Android Auto 广受欢迎——因其将手机系统中人们熟悉的界面映射到了车载娱乐屏上。</p>
+<p>由于驾驶过程中，复杂的交互行为容易引起驾驶员分心，最佳解决方案便是将这类交互完全从车载系统里移除。既然用户只习惯在手机和电脑上操作系统，何不将这类交互放到用户更习惯的设备上？因此我尝试以一种不会给用户增添额外负担的方式来实现这个目标。</p>
+<p>我设想的方案是将整套车载娱乐系统迁移到任何设备都可访问的云端环境。用户若需要更改汽车设置、规划导航路线或安装应用等，通过笔记本、平板或智能手机便能实现。坐在家里沙发上就能向汽车发送指令。仪表盘仅承载信息娱乐系统的部分功能。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/ipadUI.webp"
+                      alt="ipadUI.webp"
+                ></p>
+<p>车载系统仅提供基础交互功能。在某些情况下，这种限制会导致驾驶员在开车时使用手机。因此设计工作不仅要从软件层面围绕智能手机展开，物理层面的设计也同样重要。</p>
+<p>为了防止驾驶员在行车过程中使用手机，需要在车内为驾驶员在内的每位乘客提供单独放置手机的位置。这些位置不仅配备无线充电功能，也是手机与车辆建立连接的接口。这意味着任何人都可以通过手机与车辆进行交互。如：当有同行者时，若驾驶员需要寻找加油站，便可请其他乘客协助将新的路线同步至车载系统。这套方案同样适用于影音娱乐、系统设置、信息通讯等模块。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/RenaultInterior.webp"
+                      alt="RenaultInterior.webp"
+                ></p>
+<p>前文提到，为了减少驾驶员的视线偏移，多数信息都显示在仪表盘（正对驾驶员视野下方）。这种设计虽然有利于驾驶员专注驾驶，却让乘客缺失了显示音乐、导航等信息的中控屏。为此，我们在汽车控制台中心设置了一个区域用于连接手机。“主连接区域”与普通手机放置区域的不同点在于：该位置是驾驶员唯一触手可及的地方，手机放在此处将完全限制车内人员使用。此处会向车内所有人同步当前播放的媒体、时间及预计到达时间（ETA）等关键信息，仅支持语音交互。为了防止驾驶员分心，在驾驶过程中手机一旦离开此区域，将限制驾驶员的任何操作。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/phoneUI.webp"
+                      alt="phoneUI.webp"
+                ></p>
+<p>为了更好理解，试想一个小场景：你明天需要长途驾驶，在前一天晚上便打开谷歌地图，将规划好的路线同步至车内系统。考虑到出发时可能天气炎热，你将车内空调设定在出发前 5 分钟自动打开，制造一个凉爽的车内环境。你也已经将驾驶时想听的播客加入到播放清单。第二天，手机会及时提醒你路上拥堵，需要提前出发。当你坐上驾驶位，只需将手机放到中央控制台，便可轻松上路。</p>
+<h1 id="概念验证"><a href="#概念验证" class="headerlink" title="概念验证"></a>概念验证</h1><p>我刚刚提出了一个宏大且充满研究假设的新概念。现在是时候验证其可行性了。这个概念非常宽泛，所以我聚焦于手势交互这一细分领域。具体来讲，手势交互的可发现性，以及用户是否能成为“专家用户”，是我在本概念设计中最关心的两点。“专家用户”，特指那些无需界面引导就能使用系统的用户。</p>
+<p>基于1$ Unistroke Recognizer（一种单笔画手势识别算法）算法，我用JavaScript构建了基础交互原型。测试设备选用了与汽车方向盘尺寸大致相当的iPad Pro。</p>
+<p>我设计了覆盖多个难度级别的测试场景，从简单的“暂停歌曲”开始，逐渐过渡到像“回复收到的消息”这类复杂指令。通过逐步增加任务难度，让参与者渐渐理解这个概念方案。为了测试手势的可发现性，我将 iPad 交给了参与者时，未做任何说明。</p>
+<h2 id="用户测试"><a href="#用户测试" class="headerlink" title="用户测试"></a>用户测试</h2><p>首先，为了排查核心问题，我组织另外四位 UX设计师进行了一次基础测试。根据测试结果，我们对界面进行了一些微调，如给予用户更多引导和反馈。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250820173027.png"
+                      alt="image.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250820173101.png"
+                      alt="image.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250820173132.png"
+                      alt="image.png"
+                ></p>
+<p>我们组织了 14 名未接触过项目的用户完成第二次用户测试。其中包括6名UX设计师和8名无设计或技术背景的小白用户。<br>原型视频如下：<a class="link"   target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ZalEELCdIoc" >In-Car Gesture Interaction Concept - YouTube</a></p>
+<p>测试效果令人满意。当参与者拿到原型产品时，短时间内便能理解系统运作机制。大部分参与者在完成前两个任务后便迅速学会了系统使用方法。超半数的参与者自行发现了”专家模式”，很快便能脱离界面引导，独立使用系统。</p>
+<p>测试过程中，大部分参与者在有些环节确实需要帮助才能完成任务。一个重要原因在于系统的可靠性。在一些案例中，系统出现的误判让参与者从一开始便陷入困惑，并走向了错误的路径。此外，部分手势设计得不够直观。例如许多参与者习惯“轻触”（而非滑动）触控板来暂停歌曲。基于这些问题，我们提出了两项改善措施：</p>
+<ol>
+<li>在触控板与操作界面间建立明确关联，引导用户执行各阶段操作；</li>
+<li>屏幕指引应更生动形象，最好采用动效或更形象的图标，帮助用户更容易明白应该采用哪种类型的交互——何时执行滑动操作或特定定制手势，以及如何使用。</li>
+</ol>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>用户测试结果显示，手势交互在车载应用中具有巨大的潜力。其最大的劣势——可发现性，虽能通过设计改善，但需进一步研究验证方案的全面可行性。当务之急是测试针对界面的改善方案，然后在真实车内搭建交互原型，在实际驾驶场景中对交互体验展开深度研究。</p>
+<p>根据用户测试后的个人观察，手势交互体验实际上非常友好，但当前菜单结构的界面显然并非最佳解决方案。仅靠手势控制具有两个不同层级的菜单，太过于复杂。例如当用户正在使用导航应用时，若要切换下一首歌，则需要在每个触控板上滑动——这相当繁琐。针对这类使用场景，我们需要研究应该使用哪种界面设计更合适。</p>
+<p>从更宏观的层面来看，本项研究凸显了从传统交互模式转向差异化的、更现代的交互模式是很必要的。近年来，车内整合的新技术显著增多，但交互模式的创新却停滞不前。当前，汽车新势力正为汽车带来全新的用户体验、新型商业模式占领市场、科技巨头纷纷进军汽车行业，汽车自动驾驶不断发展…打造简洁高效的人机交互系统变得前所未有的重要。本设计概念正是对这一目标的初步尝试。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>该项目在雷诺汽车设计部门完成。衷心感谢雷诺设计团队提供的本次实践机会，并在整个过程中给予了我莫大的帮助。如果你想了解更多项目信息，可点击此处获取完整报告。</p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1/">#体验设计</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E8%AF%91%E6%96%87/">#译文</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/HMI/">#HMI</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/05/09/优秀汽车用户体验设计的 8 条指南/" title="优秀汽车用户体验设计的 8 条指南" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250715214457.png" alt="优秀汽车用户体验设计的 8 条指南" class="!max-w-none">
+  <span class="title">优秀汽车用户体验设计的 8 条指南</span>
+</a><a class="recommended-article-item" href="/2024/06/22/TV体验设计经验手册/" title="TV大屏体验设计经验手册" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/bastian-riccardi-JKfDuqD90pI-unsplash.jpg" alt="TV大屏体验设计经验手册" class="!max-w-none">
+  <span class="title">TV大屏体验设计经验手册</span>
+</a><a class="recommended-article-item" href="/2023/09/20/实例拆解：可用性测试经验总结/" title="实例拆解：可用性测试经验总结" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/202408301636382.png" alt="实例拆解：可用性测试经验总结" class="!max-w-none">
+  <span class="title">实例拆解：可用性测试经验总结</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/05/09/优秀汽车用户体验设计的 8 条指南/" title="优秀汽车用户体验设计的 8 条指南" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/20250715214457.png" alt="优秀汽车用户体验设计的 8 条指南" class="!max-w-none">
+  <span class="title">优秀汽车用户体验设计的 8 条指南</span>
+</a><a class="recommended-article-item" href="/2024/06/22/TV体验设计经验手册/" title="TV大屏体验设计经验手册" rel="bookmark">
+  <img src="https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/bastian-riccardi-JKfDuqD90pI-unsplash.jpg" alt="TV大屏体验设计经验手册" class="!max-w-none">
+  <span class="title">TV大屏体验设计经验手册</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/10/19/%E8%AE%A9%E7%A0%94%E5%8F%91%E7%AC%91%E8%84%B8%E7%9B%B8%E8%BF%8E%E7%9A%84%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">让研发笑脸相迎的需求文档</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/07/07/%E7%94%A8%E6%88%B7%E7%A0%94%E7%A9%B6%E4%B8%AD%E7%9A%84%E5%BC%80%E6%94%BE%E5%BC%8F%E9%97%AE%E9%A2%98%E4%B8%8E%E5%B0%81%E9%97%AD%E5%BC%8F%E9%97%AE%E9%A2%98/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">用户研究中的开放式问题与封闭式问题</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">一种减少驾驶员分心的新型用户体验设计概念</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%A4%E4%BA%92%E7%A0%94%E7%A9%B6"><span class="nav-text">交互研究</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E4%BA%A4%E4%BA%92"><span class="nav-text">基础交互</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E4%BA%A4%E4%BA%92"><span class="nav-text">复杂交互</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E9%AA%8C%E8%AF%81"><span class="nav-text">概念验证</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E6%B5%8B%E8%AF%95"><span class="nav-text">用户测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-text">结论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E5%90%8E"><span class="nav-text">最后</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+    </ul>
+
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+       
+
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Swup.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/imageViewer.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/utils.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/main.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/categoryList.js"></script>
+
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/lazyload.js"></script>
+
+
+
+
+
+  <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/typed.js"></script>
+
+
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/masonry.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/anime.min.js"></script>'
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/tools/tocToggle.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/layouts/toc.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/libs/APlayer.min.js"></script>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.0/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>

@@ -64,6 +64,7 @@ home_banner:
     dark: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/jamesgilleard.jpg
 
   title: 👀
+
   subtitle:
     text: [] 
     typing_speed: 100 # Typing speed (ms)
@@ -77,7 +78,7 @@ home_banner:
     light: "#fff" # light mode
     dark: "#d1d1b6" # dark mode
   text_style: 
-    title_size: 2.8 rem
+    title_size: 2.8rem
     subtitle_size: 1.5rem
     line_height: 1.2
   
@@ -159,22 +160,23 @@ home:
     links:
       设计:
         icon: fa-regular fa-hashtag
-        path: https://woooooo.cn/categories/%E8%AE%BE%E8%AE%A1/
+        path: /categories/设计
       
       阅读:
         icon: fa-regular fa-hashtag
-        path: https://woooooo.cn/categories/%E9%98%85%E8%AF%BB/
+        path: /categories/阅读/
 
       旅行:
         icon: fa-regular fa-hashtag
-        path: https://woooooo.cn/categories/%E6%97%85%E8%A1%8C/
+        path: /categories/旅行
 
       思考:
         icon: fa-regular fa-hashtag
-        path: https://woooooo.cn/categories/%E6%80%9D%E8%80%83/
+        path: /categories/胡思乱想/
 
-      
-
+      折腾:
+        icon: fa-regular fa-hashtag
+        path: /categories/🦐折腾/
 
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
