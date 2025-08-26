@@ -60,7 +60,7 @@ home_banner:
   enable: true
   style: fixed # static or fixed
   image: 
-    light: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/%E5%B9%BB%E7%81%AF%E7%89%87%2016_9%20-%207@4x.png
+    light: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/Japan%20by%20Car%202.png
     dark: https://savemyblogpic-1311313070.cos.ap-chengdu.myqcloud.com/blogpicture/jamesgilleard.jpg
 
   title: 👀
