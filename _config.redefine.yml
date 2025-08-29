@@ -119,17 +119,18 @@ navbar:
     Archives: 
       path: /archives 
       icon: fa-regular fa-archive
+
+    书影:
+      icon: fa-regular fa-eyes
+      submenus:
+        书单: /books
+        观影: /movies
     
     About:
       path: /about
       icon: fa-regular fa-address-card
 
 
-    看什么:
-      icon: fa-regular fa-eyes
-      submenus:
-        书单: /books
-        观影: /movies
 
     # About: 
     #   icon: fa-regular fa-user
